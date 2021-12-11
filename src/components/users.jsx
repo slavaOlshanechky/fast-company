@@ -44,24 +44,6 @@ const Users = () => {
         return classes
     }
 
-    const deleteUser = () => {
-
-        return (
-            users.length !== 0 &&
-
-            users.map((user) => (
-                <tr
-                    key={user._id}
-                    className="btn btn-primary btn-sm m-2"
-                    onClick={() => handleDelete(user._id)}
-                >
-
-                </tr>
-            ))
-
-        );
-    };
-
     // if (users.length !== 0) {
     //     return <tbody>{deleteUser()}</tbody>;
     // }
@@ -75,16 +57,11 @@ const Users = () => {
     }
     const getQualityBadgeClasses = (userQualities) => {
         let classes = "badge rounded-pill";
-        users.map((user) =>
-        {
+        users.map((user) => {
             user.qualities.map((quality) => {
                 classes += ` bg-${quality.color}`
             })
         })
-        //     userQualities.map((quality) => {
-        //     classes += ` bg- ${quality.color}`
-        // })
-
         return classes;
     };
 
@@ -96,12 +73,12 @@ const Users = () => {
             users.map((user) =>
                 <tr>
                     <td>{user.name}</td>
-                    <td className={getQualityBadgeClasses()} >{qualitiesIterator(user)}</td>
+                    <td className={getQualityBadgeClasses()}>{qualitiesIterator(user)}</td>
                     <td>{user.profession.name}</td>
                     <td>{user.completedMeetings}</td>
                     <td>{user.rate}/5</td>
                     <td>
-                        <button className="btn btn-primary btn-sm m-2" onClick={handleDelete}>
+                        <button className="btn btn-primary btn-sm m-2" onClick={() => handleDelete(user._id)}>
                             delete
                         </button>
                     </td>
