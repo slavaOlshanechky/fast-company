@@ -44,10 +44,6 @@ const Users = () => {
         return classes
     }
 
-    // if (users.length !== 0) {
-    //     return <tbody>{deleteUser()}</tbody>;
-    // }
-
     const qualitiesIterator = (user) => {
         const userQualities = []
         user.qualities.map((quality) => {
@@ -73,7 +69,7 @@ const Users = () => {
             users.map((user) =>
                 <tr>
                     <td>{user.name}</td>
-                    <td className={getQualityBadgeClasses()}>{qualitiesIterator(user)}</td>
+                    <td key={user._id} className={getQualityBadgeClasses()}>{qualitiesIterator(user)}</td>
                     <td>{user.profession.name}</td>
                     <td>{user.completedMeetings}</td>
                     <td>{user.rate}/5</td>
@@ -87,27 +83,6 @@ const Users = () => {
         );
     };
 
-    // if (users.length !== 0) {
-    //     return (
-    //         <table className="table">
-    //             <thead className="head">
-    //             <tr>
-    //                 <th scope="col">Имя</th>
-    //                 <th scope="col">Качества</th>
-    //                 <th scope="col">Профессия</th>
-    //                 <th scope="col">Встретился, раз</th>
-    //                 <th scope="col">Оценка</th>
-    //                 <th scope="col"></th>
-    //             </tr>
-    //
-    //
-    //             </thead>
-    //
-    //             <tbody>{renderTab()}</tbody>
-    //
-    //         </table>
-    //     )
-    // }
     return (
         <>
             <span className={getBadgeClasses()}>{renderPhrase(count)}</span>
