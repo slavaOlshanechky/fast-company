@@ -39,10 +39,6 @@ const Users = () => {
 
     const getBadgeClasses = () => {
         let classes = 'badge rounded-pill '
-        // let qualities=[]
-        // users.map((user)=>{
-        //     qualities=user.qualities
-        // })
         classes += users.length === 0 ? 'bg-warning' : 'bg-primary'
 
         return classes
@@ -69,22 +65,47 @@ const Users = () => {
     // if (users.length !== 0) {
     //     return <tbody>{deleteUser()}</tbody>;
     // }
+
+    const qualitiesIterator = (user) => {
+        const userQualities = []
+        user.qualities.map((quality) => {
+            userQualities.push(quality.name)
+        })
+        return userQualities
+    }
+    const getQualityBadgeClasses = (userQualities) => {
+        let classes = "badge rounded-pill";
+        users.map((user) =>
+        {
+            user.qualities.map((quality) => {
+                classes += ` bg-${quality.color}`
+            })
+        })
+        //     userQualities.map((quality) => {
+        //     classes += ` bg- ${quality.color}`
+        // })
+
+        return classes;
+    };
+
     const renderTab = () => {
         return (
+
             users.length !== 0 &&
+
             users.map((user) =>
-                    <tr>
-                        <td>{user.name}</td>
-                        <td>{user.qualities}</td>
-                        <td>{user.profession}</td>
-                        <td>{user.completedMeetings}</td>
-                        <td>{user.rate}/5</td>
-                        <td>
-                            <button className="btn btn-primary btn-sm m-2" onClick={handleDelete}>
-                                delete
-                            </button>
-                        </td>
-                    </tr>
+                <tr>
+                    <td>{user.name}</td>
+                    <td className={getQualityBadgeClasses()} >{qualitiesIterator(user)}</td>
+                    <td>{user.profession.name}</td>
+                    <td>{user.completedMeetings}</td>
+                    <td>{user.rate}/5</td>
+                    <td>
+                        <button className="btn btn-primary btn-sm m-2" onClick={handleDelete}>
+                            delete
+                        </button>
+                    </td>
+                </tr>
             )
         );
     };
