@@ -36,7 +36,6 @@ const Users = () => {
         return number === 0 ? "Никто с тобой не тусанет" : phrase
     }
 
-
     const getBadgeClasses = () => {
         let classes = 'badge rounded-pill '
         classes += users.length === 0 ? 'bg-warning' : 'bg-primary'
@@ -45,31 +44,25 @@ const Users = () => {
     }
 
     const qualitiesIterator = (user) => {
-        const userQualities = []
-        user.qualities.map((quality) => {
-            userQualities.push(quality.name)
-        })
-        return userQualities
+
+        return (user.qualities.map((quality) =>
+            <span
+                key={Math.random().toString() + user._id}
+                className={`badge rounded-pill bg-${quality.color}`}
+            >{quality.name}</span>
+        ))
     }
-    const getQualityBadgeClasses = (userQualities) => {
-        let classes = "badge rounded-pill";
-        users.map((user) => {
-            user.qualities.map((quality) => {
-                classes += ` bg-${quality.color}`
-            })
-        })
-        return classes;
-    };
+
 
     const renderTab = () => {
         return (
-
             users.length !== 0 &&
-
             users.map((user) =>
-                <tr>
+                <tr key={Math.random().toString() + user._id}>
                     <td>{user.name}</td>
-                    <td key={user._id} className={getQualityBadgeClasses()}>{qualitiesIterator(user)}</td>
+                    <td key={user._id}>
+                        {qualitiesIterator(user)}
+                    </td>
                     <td>{user.profession.name}</td>
                     <td>{user.completedMeetings}</td>
                     <td>{user.rate}/5</td>
