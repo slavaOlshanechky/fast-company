@@ -3,19 +3,9 @@ import api from "../api"
 
 const Users = () => {
     const [users, setUsers] = useState(api.users.fetchAll())
-    const [count, setCount] = useState(users.length);
-
-
-    // const formatCount = () => {
-    //     return count === 0 ? "Никто с тобой не тусанет" : count;
-    // };
 
     const handleDelete = (userId) => {
-
-        setUsers(prevState=> prevState.filter(id => id !== userId));
-        setCount(prevState=>prevState-1)
-
-        console.log(userId)
+        setUsers(prevState => prevState.filter(user => user._id !== userId))
     }
 
     const renderPhrase = (number) => {
@@ -23,10 +13,7 @@ const Users = () => {
         let suffix2 = null
         let phrase = null
         let n = number % 10
-        // if (number === 0) {
-        //     phrase = "Никто с тобой не тусанет"
-        //     return
-        // }
+
         if (n === 1 || (number >= 5 && number <= 20) || n === 0) {
             suffix1 = ''
             suffix2 = 'ет'
@@ -51,7 +38,7 @@ const Users = () => {
 
         return (user.qualities.map((quality) =>
             <span
-                key={Math.random().toString() + user._id}
+                key={quality._id}
                 className={`badge rounded-pill bg-${quality.color}`}
             >{quality.name}</span>
         ))
@@ -62,9 +49,9 @@ const Users = () => {
         return (
             users.length !== 0 &&
             users.map((user) =>
-                <tr key={Math.random().toString() + user._id}>
+                <tr key={user._id}>
                     <td>{user.name}</td>
-                    <td key={user._id}>
+                    <td>
                         {qualitiesIterator(user)}
                     </td>
                     <td>{user.profession.name}</td>
@@ -82,7 +69,7 @@ const Users = () => {
 
     return (
         <>
-            <span className={getBadgeClasses()}>{renderPhrase(count)}</span>
+            <span className={getBadgeClasses()}>{renderPhrase(users.length)}</span>
 
             <table className="table">
                 <thead className="head">
