@@ -11,9 +11,13 @@ const Users = () => {
     // };
 
     const handleDelete = (userId) => {
-        setUsers((prevState) => prevState.filter((id) => id !== userId));
 
+        setUsers(prevState=> prevState.filter(id => id !== userId));
+        setCount(prevState=>prevState-1)
+
+        console.log(userId)
     }
+
     const renderPhrase = (number) => {
         let suffix1 = null
         let suffix2 = null
@@ -90,12 +94,8 @@ const Users = () => {
                     <th scope="col">Оценка</th>
                     <th scope="col"></th>
                 </tr>
-
-
                 </thead>
-
                 <tbody>{renderTab()}</tbody>
-
             </table>
 
         </>
