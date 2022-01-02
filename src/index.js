@@ -1,5 +1,5 @@
 import React from 'react';
-import reactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 import "bootstrap/dist/css/bootstrap.css"
 import reportWebVitals from "./reportWebVitals";
 import App from "./app";
@@ -10,7 +10,7 @@ import App from "./app";
 // reactDOM.render(
 //     <App/>, document.getElementById("root")
 // )
-reactDOM.render(
+ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,

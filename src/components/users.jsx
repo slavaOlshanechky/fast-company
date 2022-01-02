@@ -1,12 +1,26 @@
 import React from "react";
 import User from "./user";
-const Users = ({users,...rest}) => {
 
+const Users = (props) => {
+    const {users, onDelete, onToggleBookMark} = props
+    const renderTable = () => {
+        return (
+            <>
+                {users.map((user) => (
+                    <User
+                        key={user._id}
+                        user={user}
+                        onDelete={onDelete}
+                        onToggleBookMark={onToggleBookMark}
+                    />
+                ))}
+            </>
+        )
+
+    }
 
     return (
         <>
-            {/*<span className={getBadgeClasses()}>{renderPhrase(users.length)}</span>*/}
-            {SearchStatus}
             <table className="table">
                 <thead className="head">
                 <tr>
@@ -19,7 +33,9 @@ const Users = ({users,...rest}) => {
                     <th scope="col"></th>
                 </tr>
                 </thead>
-                <tbody>{renderTab()}</tbody>
+                <tbody>
+                {renderTable(users.length)}
+                </tbody>
             </table>
 
         </>

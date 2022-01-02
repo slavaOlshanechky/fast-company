@@ -1,9 +1,21 @@
 import React from "react";
 
-const Quality = ({color,name,_id}) => {
+const Quality = (props) => {
+    const {qualitiesArr} = props
 
-return
+    return (
+        <>
+            {qualitiesArr.map((item) => {
+                const {_id, name, color} = item
+                return (
+                    <span key={_id} className={`badge bg-${color} m-1`}>
+                        {name}
+                    </span>
+                )
+            })}
+        </>
 
+    )
 }
 
 export default Quality
