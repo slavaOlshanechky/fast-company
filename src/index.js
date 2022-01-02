@@ -1,9 +1,8 @@
 import React from 'react';
-import reactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 import "bootstrap/dist/css/bootstrap.css"
-import Users from "./components/users";
 import reportWebVitals from "./reportWebVitals";
-
+import App from "./app";
 // const App = () => {
 //     return <Users/>
 // }
@@ -11,9 +10,9 @@ import reportWebVitals from "./reportWebVitals";
 // reactDOM.render(
 //     <App/>, document.getElementById("root")
 // )
-reactDOM.render(
+ReactDOM.render(
   <React.StrictMode>
-    <Users />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
