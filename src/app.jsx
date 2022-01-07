@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Users from "./components/users";
 import api from "./api";
-import SearchStatus from "./components/searchStatus";
 
 const App = () => {
     const [users, setUsers] = useState(api.users.fetchAll());
@@ -21,7 +20,6 @@ const App = () => {
 
     return (
         <>
-            {<SearchStatus number={users.length} />}
             {users.length !== 0 && (
                 <Users
                     users={users}
