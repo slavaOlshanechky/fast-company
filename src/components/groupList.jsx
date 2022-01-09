@@ -27,6 +27,7 @@ const GroupList = ({
                         {items[item][contentProperty]}
                     </li>
                 ))}
+
             {items != null &&
                 typeof items !== "object" &&
                 items.isArray() &&
