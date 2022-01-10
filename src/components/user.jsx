@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 // const User = (props) => {
 //     const { user,onDelete, onToggleBookMark} = props
-//     const {_id, name, qualities, profession, completedMeetings, rate, isBookMarked} = user
+//     const {_id, name, qualities, profession, completedMeetings, rate, bookmark} = user
 //
 //     const {name: profName} = profession;
 const User = ({
@@ -16,7 +16,7 @@ const User = ({
     completedMeetings,
     rate,
     onDelete,
-    isBookMarked,
+    bookmark,
     onToggleBookMark
 }) => {
     return (
@@ -32,7 +32,7 @@ const User = ({
             <td>{rate}/5</td>
             <td>
                 <Bookmark
-                    status={isBookMarked}
+                    status={bookmark}
                     onClick={() => onToggleBookMark(_id)}
                 />
             </td>
@@ -55,7 +55,7 @@ User.propTypes = {
     completedMeetings: PropTypes.number.isRequired,
     rate: PropTypes.number.isRequired,
     onDelete: PropTypes.func.isRequired,
-    isBookMarked: PropTypes.bool,
+    bookmark: PropTypes.bool,
     onToggleBookMark: PropTypes.func.isRequired
 };
 

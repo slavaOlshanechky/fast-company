@@ -16,10 +16,18 @@ const App = () => {
     };
 
     const handleToggleBookMark = (id) => {
-        const newUsers = [...users];
-        const index = newUsers.findIndex((user) => user._id === id);
-        newUsers[index].isBookMarked = !newUsers[index].isBookMarked;
-        setUsers(newUsers);
+        // const newUsers = [...users];
+        // const index = newUsers.findIndex((user) => user._id === id);
+        // newUsers[index].bookmark = !newUsers[index].bookmark;
+        // setUsers(newUsers);
+        setUsers(
+            users.map((user) => {
+                if (user._id === id) {
+                    return { ...user, bookmark: !user.bookmark };
+                }
+                return user;
+            })
+        );
     };
 
     return (
