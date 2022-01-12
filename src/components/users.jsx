@@ -8,12 +8,46 @@ import SearchStatus from "./searchStatus";
 import UsersTable from "./usersTable";
 import _ from "lodash";
 
-const Users = ({ users: allUsers, ...rest }) => {
+const Users = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [professions, setProfession] = useState();
     const [selectedProf, setSelectedProf] = useState();
     const [sortBy, setSortBy] = useState({ iter: "name", order: "asc" });
     const pageSize = 8;
+
+    const [users, setUsers] = useState();
+    useEffect(() => {
+        api.users.fetchAll().then((data) => setUsers(data));
+    }, []);
+
+    const handleDelete = (userId) => {
+        setUsers((prevState) =>
+            prevState.filter((user) => user._id !== userId)
+        );
+    };
+
+    const handleToggleBookMark = (id) => {
+        setUsers(
+            users.map((user) => {
+                if (user._id === id) {
+                    return { ...user, bookmark: !user.bookmark };
+                }
+                return user;
+            })
+        );
+    };
+
+    // return (
+    //     <>
+    //         {users && users.length !== 0 && (
+    //             <Users
+    //                 users={users}
+    //                 onDelete={handleDelete}
+    //                 onToggleBookMark={handleToggleBookMark}
+    //             />
+    //         )}
+    //     </>
+    // );
 
     useEffect(() => {
         api.professions.fetchAll().then((data) =>
@@ -49,19 +83,19 @@ const Users = ({ users: allUsers, ...rest }) => {
     const handleProfessionSelect = (item) => {
         setSelectedProf(item);
     };
-    if (!allUsers) return <h2>loading....</h2>;
+    if (!users) return <h2>loading....</h2>;
 
     const filteredUsers =
         // first method of clearing the filter
         // selectedProf && selectedProf._id
         selectedProf
-            ? allUsers.filter(
+            ? users.filter(
                   (user) =>
                       // user.profession._id === selectedProf._id //first method
                       JSON.stringify(user.profession) ===
                       JSON.stringify(selectedProf) //second method for comparison object and array
               )
-            : allUsers;
+            : users;
 
     const count = filteredUsers.length;
 
@@ -71,7 +105,7 @@ const Users = ({ users: allUsers, ...rest }) => {
 
     if (usersCrop.length === 0 && count) setCurrentPage((prev) => prev - 1);
 
-    if (allUsers.length === 0) return <h2>No users left</h2>;
+    if (users.length === 0) return <h2>No users left</h2>;
 
     if (!count) {
         clearFilter();
@@ -103,7 +137,8 @@ const Users = ({ users: allUsers, ...rest }) => {
                         users={usersCrop}
                         onSort={handleSort}
                         selectedSort={sortBy}
-                        {...rest}
+                        onDelete={handleDelete}
+                        onToggleBookMark={handleToggleBookMark}
                     />
                 )}
                 <div className="d-flex justify-content-center">
