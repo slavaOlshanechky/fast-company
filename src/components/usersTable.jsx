@@ -3,11 +3,13 @@ import PropTypes from "prop-types";
 import TableHeader from "./tableHeader";
 import TableBody from "./tableBody";
 import Bookmark from "./bookmark";
+import QualitiesList from "./qualitiesList";
+import Table from "./table";
 
 const UsersTable = ({users, onSort, selectedSort, onToggleBookMark, onDelete, ...rest}) => {
     const columns = {
         name: {path: "name", name: "Имя"},
-        qualities: {name: "Качества"},
+        qualities: {name: "Качества", component: (user) => (<QualitiesList qualities={user.qualities}/>)},
         professions: {path: "profession.name", name: "Профессия"},
         completedMeetings: {
             path: "completedMeetings",
@@ -38,14 +40,15 @@ const UsersTable = ({users, onSort, selectedSort, onToggleBookMark, onDelete, ..
     };
 
     return (
-        <table className="table">
+        //first method
+        // <Table onSort={onSort} selectedSort={selectedSort} columns={columns} data={users}/>
+
+// second method with children
+        <Table>
             <TableHeader {...{onSort, selectedSort, columns}} />
-            <TableBody {...{columns, data: users}}>
-                {/*{users.map((user) => (*/}
-                {/*    <User {...rest} {...user} key={user._id} />*/}
-                {/*))}*/}
-            </TableBody>
-        </table>
+            <TableBody {...{columns, data: users}}/>
+        </Table>
+
     );
 };
 
