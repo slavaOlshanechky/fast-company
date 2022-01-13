@@ -1,18 +1,53 @@
 import React, { useEffect, useState } from "react";
-import User from "./user";
 import Pagination from "./pagination";
 import { paginate } from "../utils/paginate";
 import PropTypes from "prop-types";
 import api from "../api";
 import GroupList from "./groupList";
 import SearchStatus from "./searchStatus";
+import UsersTable from "./usersTable";
+import _ from "lodash";
 
-const Users = ({ users: allUsers, ...rest }) => {
+const Users = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [professions, setProfession] = useState();
     const [selectedProf, setSelectedProf] = useState();
+    const [sortBy, setSortBy] = useState({ iter: "name", order: "asc" });
+    const pageSize = 8;
 
-    const pageSize = 2;
+    const [users, setUsers] = useState();
+    useEffect(() => {
+        api.users.fetchAll().then((data) => setUsers(data));
+    }, []);
+
+    const handleDelete = (userId) => {
+        setUsers((prevState) =>
+            prevState.filter((user) => user._id !== userId)
+        );
+    };
+
+    const handleToggleBookMark = (id) => {
+        setUsers(
+            users.map((user) => {
+                if (user._id === id) {
+                    return { ...user, bookmark: !user.bookmark };
+                }
+                return user;
+            })
+        );
+    };
+
+    // return (
+    //     <>
+    //         {users && users.length !== 0 && (
+    //             <Users
+    //                 users={users}
+    //                 onDelete={handleDelete}
+    //                 onToggleBookMark={handleToggleBookMark}
+    //             />
+    //         )}
+    //     </>
+    // );
 
     useEffect(() => {
         api.professions.fetchAll().then((data) =>
@@ -37,6 +72,9 @@ const Users = ({ users: allUsers, ...rest }) => {
         setCurrentPage(pageIndex);
     };
 
+    const handleSort = (item) => {
+        setSortBy(item);
+    };
     // second method for clearing the filter
     const clearFilter = () => {
         setSelectedProf();
@@ -45,24 +83,29 @@ const Users = ({ users: allUsers, ...rest }) => {
     const handleProfessionSelect = (item) => {
         setSelectedProf(item);
     };
-    if (!allUsers) return <h2>loading....</h2>;
+    if (!users) return <h2>loading....</h2>;
 
     const filteredUsers =
         // first method of clearing the filter
         // selectedProf && selectedProf._id
         selectedProf
-            ? allUsers.filter(
-                  (user) => user.profession._id === selectedProf._id
+            ? users.filter(
+                  (user) =>
+                      // user.profession._id === selectedProf._id //first method
+                      JSON.stringify(user.profession) ===
+                      JSON.stringify(selectedProf) //second method for comparison object and array
               )
-            : allUsers;
+            : users;
 
     const count = filteredUsers.length;
 
-    const usersCrop = paginate(filteredUsers, currentPage, pageSize);
+    const sortedUsers = _.orderBy(filteredUsers, [sortBy.path], [sortBy.order]); //'asc'-ascending 'desc'-descending
+
+    const usersCrop = paginate(sortedUsers, currentPage, pageSize);
 
     if (usersCrop.length === 0 && count) setCurrentPage((prev) => prev - 1);
 
-    if (allUsers.length === 0) return <h2>No users left</h2>;
+    if (users.length === 0) return <h2>No users left</h2>;
 
     if (!count) {
         clearFilter();
@@ -90,25 +133,13 @@ const Users = ({ users: allUsers, ...rest }) => {
                 {<SearchStatus number={count} />}
 
                 {count > 0 && (
-                    <table className="table">
-                        <thead className="head">
-                            <tr>
-                                <th scope="col">Имя</th>
-                                <th scope="col">Качества</th>
-                                <th scope="col">Профессия</th>
-                                <th scope="col">Встретился, раз</th>
-                                <th scope="col">Оценка</th>
-                                <th scope="col">Избранное</th>
-                                <th scope="col" />
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {usersCrop.map((user) => (
-                                <User key={user._id} {...rest} {...user} />
-                            ))}
-                            {/* {renderTable(users.length)} */}
-                        </tbody>
-                    </table>
+                    <UsersTable
+                        users={usersCrop}
+                        onSort={handleSort}
+                        selectedSort={sortBy}
+                        onDelete={handleDelete}
+                        onToggleBookMark={handleToggleBookMark}
+                    />
                 )}
                 <div className="d-flex justify-content-center">
                     <Pagination
