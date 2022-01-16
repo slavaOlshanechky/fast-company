@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/app/components/navbar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -11,18 +13,18 @@
       <change beforePath="$PROJECT_DIR$/src/api/fake.api/user.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/fake.api/user.api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bookmark.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/groupList.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pagination.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/qualitiesList.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/quality.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/searchStatus.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/table.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tableBody.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tableHeader.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/user.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/usersTable.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bookmark.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/bookmark.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/groupList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/groupList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/pagination.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/qualitiesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/qualitiesList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/quality.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/quality.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/searchStatus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/searchStatus.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/table.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/table.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tableBody.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/tableBody.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tableHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/tableHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/user.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/user.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/users.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/usersTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/usersTable.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/paginate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/paginate.js" afterDir="false" />
@@ -112,7 +114,7 @@
       <workItem from="1641981788313" duration="10460000" />
       <workItem from="1642067953263" duration="1386000" />
       <workItem from="1642326351353" duration="423000" />
-      <workItem from="1642331645442" duration="1444000" />
+      <workItem from="1642331645442" duration="1950000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
