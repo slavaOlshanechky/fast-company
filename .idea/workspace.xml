@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1005c460-7758-4b54-890e-f3dde2d67ead" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/components/user.jsx" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="21srcbmc1A7RUZtXGNp9oZiGUHm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-router" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\components" />
+      <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\api" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1005c460-7758-4b54-890e-f3dde2d67ead" name="Changes" comment="" />
+      <created>1638740717652</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638740717652</updated>
+      <workItem from="1638740722234" duration="2154000" />
+      <workItem from="1638785225632" duration="14293000" />
+      <workItem from="1638973860095" duration="2670000" />
+      <workItem from="1639037960687" duration="1344000" />
+      <workItem from="1639083355482" duration="4429000" />
+      <workItem from="1639131592071" duration="3564000" />
+      <workItem from="1639149777707" duration="5378000" />
+      <workItem from="1639214878011" duration="9757000" />
+      <workItem from="1639314596174" duration="702000" />
+      <workItem from="1639315368395" duration="4334000" />
+      <workItem from="1639341864919" duration="649000" />
+      <workItem from="1639390466540" duration="11904000" />
+      <workItem from="1640033193898" duration="673000" />
+      <workItem from="1640078266336" duration="7759000" />
+      <workItem from="1640167792893" duration="2998000" />
+      <workItem from="1640511214735" duration="12042000" />
+      <workItem from="1641044192076" duration="2767000" />
+      <workItem from="1641135681704" duration="10355000" />
+      <workItem from="1641196887329" duration="1007000" />
+      <workItem from="1641199196758" duration="14425000" />
+      <workItem from="1641278908655" duration="7184000" />
+      <workItem from="1641319907227" duration="2122000" />
+      <workItem from="1641322119397" duration="341000" />
+      <workItem from="1641375469559" duration="14120000" />
+      <workItem from="1641473600949" duration="7888000" />
+      <workItem from="1641548645489" duration="14939000" />
+      <workItem from="1641717301846" duration="9874000" />
+      <workItem from="1641808866385" duration="14307000" />
+      <workItem from="1641896726780" duration="9028000" />
+      <workItem from="1641981788313" duration="10460000" />
+      <workItem from="1642067953263" duration="1386000" />
+      <workItem from="1642326351353" duration="423000" />
+    </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1639150314573</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639150314573</updated>
+    </task>
+    <task id="LOCAL-00002" summary="remove icons">
+      <created>1639150411761</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639150411761</updated>
+    </task>
+    <task id="LOCAL-00003" summary="edit handleDelete()">
+      <created>1639260994263</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1639260994263</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <MESSAGE value="remove icons" />
+    <MESSAGE value="edit handleDelete()" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit handleDelete()" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
