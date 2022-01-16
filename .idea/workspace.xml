@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1005c460-7758-4b54-890e-f3dde2d67ead" name="Changes" comment="">
+    <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/fake.api/professions.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/fake.api/professions.api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/fake.api/user.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/fake.api/user.api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bookmark.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/groupList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pagination.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/qualitiesList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/quality.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/searchStatus.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/table.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tableBody.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tableHeader.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/user.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/usersTable.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/paginate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/paginate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +64,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -52,7 +75,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1005c460-7758-4b54-890e-f3dde2d67ead" name="Changes" comment="" />
+      <changelist id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="" />
       <created>1638740717652</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -89,6 +112,7 @@
       <workItem from="1641981788313" duration="10460000" />
       <workItem from="1642067953263" duration="1386000" />
       <workItem from="1642326351353" duration="423000" />
+      <workItem from="1642331645442" duration="1444000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
