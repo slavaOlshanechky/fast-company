@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/components/login.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/main.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/not-found.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/userPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/usersListPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/api/fake.api/user.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/fake.api/user.api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/tableBody.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/tableBody.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/usersTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/usersTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/qualitiesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/qualitiesList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/userPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/userPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +99,7 @@
       <workItem from="1642331645442" duration="1950000" />
       <workItem from="1642419675764" duration="6526000" />
       <workItem from="1642507718209" duration="6096000" />
-      <workItem from="1642586125218" duration="1811000" />
+      <workItem from="1642586125218" duration="6770000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>

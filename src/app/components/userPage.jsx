@@ -2,16 +2,16 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import api from "../api";
 import PropTypes from "prop-types";
+import QualitiesList from "./qualitiesList";
 
 const UserPage = ({ userId }) => {
     const history = useHistory();
     const [user, setUser] = useState(null);
-    // console.log(userId);
-    console.log(JSON.stringify(api.users.getById(userId)));
+
     useEffect(() => {
         api.users.getById(userId).then((data) => {
             setUser(data);
-        })
+        });
     }, []);
 
     const handleAllUsers = () => {
@@ -25,8 +25,12 @@ const UserPage = ({ userId }) => {
     return (
         <div>
             <h1>{user.name}</h1>
+            <h2>Профессия: {user.profession.name}</h2>
+            <QualitiesList qualities={user.qualities}/>
+            <p>completedMeetings: {user.completedMeetings}</p>
+            <h2>Rate: {user.rate}</h2>
             <button
-                className="btn btn-secondary mt-2"
+                className='btn btn-secondary'
                 onClick={handleAllUsers}
             >
                 Все пользователи
