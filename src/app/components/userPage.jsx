@@ -26,13 +26,10 @@ const UserPage = ({ userId }) => {
         <div>
             <h1>{user.name}</h1>
             <h2>Профессия: {user.profession.name}</h2>
-            <QualitiesList qualities={user.qualities}/>
+            <QualitiesList qualities={user.qualities} />
             <p>completedMeetings: {user.completedMeetings}</p>
             <h2>Rate: {user.rate}</h2>
-            <button
-                className='btn btn-secondary'
-                onClick={handleAllUsers}
-            >
+            <button className="btn btn-secondary" onClick={handleAllUsers}>
                 Все пользователи
             </button>
         </div>
