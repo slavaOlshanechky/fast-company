@@ -3,16 +3,14 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
-        <table cellpadding="10"cellspacing="10">
-            <td align="center" valign="center"><Link to="/">Main</Link>
-            </td>
-            <td></td>
-            <td align="center" valign="center"><Link to="/login">Login</Link>
-            </td>
-            <td></td>
-            <td align="center" valign="center"><Link to="/users">Users</Link>
-            </td>
-        </table>
+        <ul className="nav">
+            <li className="nav-item">
+                <Link className="nav-link" to="/">Main</Link></li>
+            <li className="nav-item">
+                <Link className="nav-link" to="/login">Login</Link></li>
+            <li className="nav-item">
+                <Link className="nav-link" to="/users">Users</Link></li>
+        </ul>
     );
 };
 
