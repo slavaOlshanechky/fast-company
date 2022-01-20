@@ -2,38 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/layouts/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/textField.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/fake.api/professions.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/fake.api/professions.api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/fake.api/user.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/fake.api/user.api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/bookmark.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/bookmark.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/groupList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/groupList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/login.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/not-found.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/pagination.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/qualitiesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/qualitiesList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/quality.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/quality.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/searchStatus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/searchStatus.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/table.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/table.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/tableBody.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/tableBody.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/tableHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/tableHeader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/user.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/userPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/userPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/usersListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/usersListPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/usersTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/usersTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/utils/paginate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/paginate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/login.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +49,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -132,7 +104,8 @@
       <workItem from="1642331645442" duration="1950000" />
       <workItem from="1642419675764" duration="6526000" />
       <workItem from="1642507718209" duration="6096000" />
-      <workItem from="1642586125218" duration="10786000" />
+      <workItem from="1642586125218" duration="11568000" />
+      <workItem from="1642676469292" duration="6887000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
