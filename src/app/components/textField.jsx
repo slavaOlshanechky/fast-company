@@ -6,7 +6,8 @@ const TextField = ({
     type,
     name,
     value,
-    onChange
+    onChange,
+    error
 }) => {
     return (
         <div>
@@ -18,6 +19,7 @@ const TextField = ({
                 name={name}
                 onChange={onChange}
             />
+            {error && <p>{error}</p>}
         </div>
     );
 };
@@ -31,6 +33,7 @@ TextField.propTypes = {
     type: PropTypes.string,
     name: PropTypes.string,
     value: PropTypes.string,
+    error: PropTypes.string,
     onChange: PropTypes.func
 };
 
