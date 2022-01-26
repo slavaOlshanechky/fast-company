@@ -7,15 +7,35 @@ import GroupList from "./groupList";
 import SearchStatus from "./searchStatus";
 import UsersTable from "./usersTable";
 import _ from "lodash";
+import TextField from "./textField";
 
 const UsersListPage = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [professions, setProfession] = useState();
     const [selectedProf, setSelectedProf] = useState();
-    const [sortBy, setSortBy] = useState({ iter: "name", order: "asc" });
+    const [sortBy, setSortBy] = useState({
+        iter: "name",
+        order: "asc"
+    });
+    const [users, setUsers] = useState();
+    const [searchByUserName, setSearchByUserName] = useState("");
+
     const pageSize = 8;
 
-    const [users, setUsers] = useState();
+    useEffect(() => {
+        api.professions.fetchAll().then((data) =>
+            setProfession(
+                data
+                // first method of clearing the filter which doesn't work with arrays
+                // Object.assign(data, {allProfession: {name: "All professions"}})
+            )
+        );
+    }, []);
+
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [selectedProf]);
+
     useEffect(() => {
         api.users.fetchAll().then((data) => setUsers(data));
     }, []);
@@ -30,43 +50,15 @@ const UsersListPage = () => {
         setUsers(
             users.map((user) => {
                 if (user._id === id) {
-                    return { ...user, bookmark: !user.bookmark };
+                    return {
+                        ...user,
+                        bookmark: !user.bookmark
+                    };
                 }
                 return user;
             })
         );
     };
-
-    // return (
-    //     <>
-    //         {users && users.length !== 0 && (
-    //             <UsersListPage
-    //                 users={users}
-    //                 onDelete={handleDelete}
-    //                 onToggleBookMark={handleToggleBookMark}
-    //             />
-    //         )}
-    //     </>
-    // );
-
-    useEffect(() => {
-        api.professions.fetchAll().then((data) =>
-            setProfession(
-                data
-                // first method of clearing the filter which doesn't work with arrays
-                // Object.assign(data, {
-                //         allProfession: {name: "All professions"}})
-            )
-        );
-    }, []);
-
-    // useEffect(()=>{
-    //     console.log(professions)
-    // },[professions])
-
-    useEffect(() => {
-        setCurrentPage(1);
-    }, [selectedProf]);
 
     const handlePageChange = (pageIndex) => {
         setCurrentPage(pageIndex);
@@ -82,25 +74,37 @@ const UsersListPage = () => {
 
     const handleProfessionSelect = (item) => {
         setSelectedProf(item);
+        setSearchByUserName("");
     };
+
+    const handleSearchByName = ({ target }) => {
+        setSearchByUserName(target.value);
+        clearFilter();
+    };
+
     if (!users) return <h2>loading....</h2>;
 
-    const filteredUsers =
+    const filterUsers = (users) => {
         // first method of clearing the filter
         // selectedProf && selectedProf._id
-        selectedProf
-            ? users.filter(
-                  (user) =>
-                      // user.profession._id === selectedProf._id //first method
-                      JSON.stringify(user.profession) ===
-                      JSON.stringify(selectedProf) //second method for comparison object and array
-              )
-            : users;
+        if (selectedProf) {
+            return users.filter(
+                (user) =>
+                    // user.profession._id === selectedProf._id //first method
+                    JSON.stringify(user.profession) ===
+                    JSON.stringify(selectedProf) //second method for comparison object and array
+            );
+        } else if (searchByUserName !== "") {
+            return users.filter((user) =>
+                _.includes(_.lowerCase(user.name), _.lowerCase(searchByUserName))
+            );
+        } else             return users;
 
+    };
+
+    const filteredUsers = filterUsers(users);
     const count = filteredUsers.length;
-
     const sortedUsers = _.orderBy(filteredUsers, [sortBy.path], [sortBy.order]); //'asc'-ascending 'desc'-descending
-
     const usersCrop = paginate(sortedUsers, currentPage, pageSize);
 
     if (usersCrop.length === 0 && count) setCurrentPage((prev) => prev - 1);
@@ -130,8 +134,14 @@ const UsersListPage = () => {
                 </div>
             )}
             <div className="d-flex flex-column">
-                {<SearchStatus number={count} />}
+                {<SearchStatus number={count}/>}
+                <TextField
+                    name="search"
+                    value={searchByUserName}
+                    onChange={handleSearchByName}
+                    placeholder="Search..."
 
+                />
                 {count > 0 && (
                     <UsersTable
                         users={usersCrop}

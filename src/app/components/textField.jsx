@@ -7,7 +7,8 @@ const TextField = ({
     name,
     value,
     onChange,
-    error
+    error,
+    placeholder
 }) => {
     const [showPassword, setShowPassword] = useState(false);
     const getInputClasses = () => {
@@ -21,7 +22,6 @@ const TextField = ({
         <div className="mb-4 ">
             <label htmlFor={name}>{label}</label>
             <div className="input-group has-validation">
-
                 <input
                     type={showPassword ? "text" : type}
                     id={name}
@@ -29,6 +29,8 @@ const TextField = ({
                     name={name}
                     onChange={onChange}
                     className={getInputClasses()}
+                    placeholder={placeholder}
+
                 />
                 {type === "password" && (<button
                         className="btn btn-outline-secondary"
