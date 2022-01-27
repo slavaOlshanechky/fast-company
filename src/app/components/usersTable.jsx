@@ -12,8 +12,7 @@ const UsersTable = ({
     onSort,
     selectedSort,
     onToggleBookMark,
-    onDelete,
-    ...rest
+    onDelete
 }) => {
     const columns = {
         name: {
@@ -25,14 +24,20 @@ const UsersTable = ({
         },
         qualities: {
             name: "Качества",
-            component: (user) => <QualitiesList qualities={user.qualities} />
+            component: (user) => <QualitiesList qualities={user.qualities}/>
         },
-        professions: { path: "profession.name", name: "Профессия" },
+        professions: {
+            path: "profession.name",
+            name: "Профессия"
+        },
         completedMeetings: {
             path: "completedMeetings",
             name: "Встретился, раз"
         },
-        rate: { path: "rate", name: "Оценка" },
+        rate: {
+            path: "rate",
+            name: "Оценка"
+        },
         bookmark: {
             path: "bookmark",
             name: "Избранное",
@@ -61,8 +66,15 @@ const UsersTable = ({
 
         // second method with children
         <Table>
-            <TableHeader {...{ onSort, selectedSort, columns }} />
-            <TableBody {...{ columns, data: users }} />
+            <TableHeader {...{
+                onSort,
+                selectedSort,
+                columns
+            }} />
+            <TableBody {...{
+                columns,
+                data: users
+            }} />
         </Table>
     );
 };

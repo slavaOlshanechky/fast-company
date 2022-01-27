@@ -30,17 +30,21 @@ const TextField = ({
                     onChange={onChange}
                     className={getInputClasses()}
                     placeholder={placeholder}
-
                 />
-                {type === "password" && (<button
+                {type === "password" && (
+                    <button
                         className="btn btn-outline-secondary"
                         type="button"
-                        onClick={toggleShowPassword}>
-                        <i className={'bi bi-eye'+(showPassword?"-slash":"")}/>
-                </button>
+                        onClick={toggleShowPassword}
+                    >
+                        <i
+                            className={
+                                "bi bi-eye" + (showPassword ? "-slash" : "")
+                            }
+                        />
+                    </button>
                 )}
                 {error && <div className="invalid-feedback">{error}</div>}
-
             </div>
         </div>
     );

@@ -81,30 +81,41 @@ const UsersListPage = () => {
         setSearchByUserName(target.value);
         clearFilter();
     };
+    // console.log(searchByUserName);
+    // const newSearchByUserName = searchByUserName.replace(/[^a-zA-Z ]/g, "д");
 
     if (!users) return <h2>loading....</h2>;
+    // const filteredUsers =
+    //     selectedProf
+    //         ? users.filter(
+    //             (user) =>
+    //                 JSON.stringify(user.profession) ===
+    //                 JSON.stringify(selectedProf)
+    //         ) : users;
 
     const filterUsers = (users) => {
-        // first method of clearing the filter
-        // selectedProf && selectedProf._id
         if (selectedProf) {
             return users.filter(
                 (user) =>
-                    // user.profession._id === selectedProf._id //first method
                     JSON.stringify(user.profession) ===
-                    JSON.stringify(selectedProf) //second method for comparison object and array
+                    JSON.stringify(selectedProf)
             );
-        } else if (searchByUserName !== "") {
+        } else if (searchByUserName) {
             return users.filter((user) =>
-                _.includes(_.lowerCase(user.name), _.lowerCase(searchByUserName))
+                user.name
+                    .trim()
+                    .toLowerCase()
+                    .includes(searchByUserName.trim().toLowerCase())
             );
-        } else             return users;
-
+        } else {
+            // const users = [];
+            return users;
+        }
     };
 
     const filteredUsers = filterUsers(users);
     const count = filteredUsers.length;
-    const sortedUsers = _.orderBy(filteredUsers, [sortBy.path], [sortBy.order]); //'asc'-ascending 'desc'-descending
+    const sortedUsers = _.orderBy(filteredUsers, [sortBy.path], [sortBy.order]); // 'asc'-ascending 'desc'-descending
     const usersCrop = paginate(sortedUsers, currentPage, pageSize);
 
     if (usersCrop.length === 0 && count) setCurrentPage((prev) => prev - 1);
@@ -140,7 +151,6 @@ const UsersListPage = () => {
                     value={searchByUserName}
                     onChange={handleSearchByName}
                     placeholder="Search..."
-
                 />
                 {count > 0 && (
                     <UsersTable
@@ -166,5 +176,6 @@ const UsersListPage = () => {
 
 UsersListPage.propTypes = {
     users: PropTypes.array
+    // data: PropTypes.object
 };
 export default UsersListPage;

@@ -10,7 +10,7 @@ const Login = () => {
     const [errors, setErrors] = useState({});
 
     const handleChange = ({ target }) => {
-        setData(prevState => ({
+        setData((prevState) => ({
             ...prevState,
             [target.name]: target.value
         }));
@@ -23,7 +23,6 @@ const Login = () => {
             },
             isEmail: {
                 message: "Email введен не корректно"
-
             }
         },
         password: {
@@ -31,7 +30,8 @@ const Login = () => {
                 message: "Пароль обязателен для заполнения"
             },
             isCapitalSymbol: {
-                message: "Пароль должен содержать как минимум одну заглавную букву"
+                message:
+                    "Пароль должен содержать как минимум одну заглавную букву"
             },
             isContainDigit: {
                 message: "Пароль должен содержать как минимум одну цифру"
@@ -71,17 +71,32 @@ const Login = () => {
                 <div className=".col-md-6 .offset-md-3 shadow p-4">
                     <h3 className="mb-4">Login</h3>
                     <form onSubmit={handleSubmit}>
-                        <TextField label="Электронная почта" name="email" value={data.email} onChange={handleChange}
-                                   error={errors.email}/>
-                        <TextField label="Пароль" type="password" name="password" value={data.password}
-                                   onChange={handleChange}
-                                   error={errors.password}/>
-                        <button type="submit" disabled={!isValid} className="btn btn-primary w-100 mx-auto">Submit</button>
+                        <TextField
+                            label="Электронная почта"
+                            name="email"
+                            value={data.email}
+                            onChange={handleChange}
+                            error={errors.email}
+                        />
+                        <TextField
+                            label="Пароль"
+                            type="password"
+                            name="password"
+                            value={data.password}
+                            onChange={handleChange}
+                            error={errors.password}
+                        />
+                        <button
+                            type="submit"
+                            disabled={!isValid}
+                            className="btn btn-primary w-100 mx-auto"
+                        >
+                            Submit
+                        </button>
                     </form>
                 </div>
             </div>
         </div>
-
     );
 };
 export default Login;

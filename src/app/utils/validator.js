@@ -4,34 +4,33 @@ export function validator(data, config) {
     function validate(validateMethod, data, config) {
         let statusValidate;
         switch (validateMethod) {
-        case "isRequired":
-            statusValidate = data.trim() === "";
-            break;
-        case "isEmail": {
-            const emailRegExp = /^\S+@\S+\.\S+$/g;
-            // const emailRegExp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            statusValidate = !emailRegExp.test(data);
-            break;
-        }
-        case "isCapitalSymbol": {
-            const capitalRegExp = /[A-Z]+/g;
-            statusValidate = !capitalRegExp.test(data);
-            break;
-        }
-        case "isContainDigit": {
-            const digitRegExp = /\d+/g;
-            statusValidate = !digitRegExp.test(data);
-            break;
-        }
-        case "min": {
-            statusValidate = data.length < config.value;
-            break;
-        }
-        default:
-            break;
+            case "isRequired":
+                statusValidate = data.trim() === "";
+                break;
+            case "isEmail": {
+                const emailRegExp = /^\S+@\S+\.\S+$/g;
+                // const emailRegExp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                statusValidate = !emailRegExp.test(data);
+                break;
+            }
+            case "isCapitalSymbol": {
+                const capitalRegExp = /[A-Z]+/g;
+                statusValidate = !capitalRegExp.test(data);
+                break;
+            }
+            case "isContainDigit": {
+                const digitRegExp = /\d+/g;
+                statusValidate = !digitRegExp.test(data);
+                break;
+            }
+            case "min": {
+                statusValidate = data.length < config.value;
+                break;
+            }
+            default:
+                break;
         }
         if (statusValidate) return config.message;
-
     }
 
     for (const fieldName in data) {

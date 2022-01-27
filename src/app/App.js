@@ -8,12 +8,12 @@ import Users from "./layouts/users";
 function App() {
     return (
         <div>
-            <Navbar/>
+            <Navbar />
             <Switch>
-                <Route path="/" exact component={Main}/>
-                <Route path="/login" component={Login}/>
-                <Route path="/users/:userId?" component={Users}/>
-                <Redirect to="/"/>
+                <Route path="/" exact component={Main} />
+                <Route path="/login" component={Login} />
+                <Route path="/users/:userId?" component={Users} />
+                <Redirect to="/" />
             </Switch>
         </div>
     );
