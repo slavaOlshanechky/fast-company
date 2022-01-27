@@ -1,7 +1,6 @@
 import React from "react";
 
 const SearchStatus = (props) => {
-    // eslint-disable-next-line react/prop-types
     const { number } = props;
     const getBadgeClasses = () => {
         let classes = "badge rounded-pill ";

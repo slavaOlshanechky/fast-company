@@ -7,21 +7,37 @@ import QualitiesList from "./qualitiesList";
 import Table from "./table";
 import { Link } from "react-router-dom";
 
-
-const UsersTable = ({users, onSort, selectedSort, onToggleBookMark, onDelete, ...rest}) => {
+const UsersTable = ({
+    users,
+    onSort,
+    selectedSort,
+    onToggleBookMark,
+    onDelete
+}) => {
     const columns = {
-        name: {path: "name", name: "Имя",
+        name: {
+            path: "name",
+            name: "Имя",
             component: (user) => (
                 <Link to={`users/${user._id}`}>{user.name}</Link>
             )
         },
-        qualities: {name: "Качества", component: (user) => (<QualitiesList qualities={user.qualities}/>)},
-        professions: {path: "profession.name", name: "Профессия"},
+        qualities: {
+            name: "Качества",
+            component: (user) => <QualitiesList qualities={user.qualities}/>
+        },
+        professions: {
+            path: "profession.name",
+            name: "Профессия"
+        },
         completedMeetings: {
             path: "completedMeetings",
             name: "Встретился, раз"
         },
-        rate: {path: "rate", name: "Оценка"},
+        rate: {
+            path: "rate",
+            name: "Оценка"
+        },
         bookmark: {
             path: "bookmark",
             name: "Избранное",
@@ -31,7 +47,6 @@ const UsersTable = ({users, onSort, selectedSort, onToggleBookMark, onDelete, ..
                     onClick={() => onToggleBookMark(user._id)}
                 />
             )
-
         },
         delete: {
             component: (user) => (
@@ -49,12 +64,18 @@ const UsersTable = ({users, onSort, selectedSort, onToggleBookMark, onDelete, ..
         //first method
         // <Table onSort={onSort} selectedSort={selectedSort} columns={columns} data={users}/>
 
-// second method with children
+        // second method with children
         <Table>
-            <TableHeader {...{onSort, selectedSort, columns}} />
-            <TableBody {...{columns, data: users}}/>
+            <TableHeader {...{
+                onSort,
+                selectedSort,
+                columns
+            }} />
+            <TableBody {...{
+                columns,
+                data: users
+            }} />
         </Table>
-
     );
 };
 
@@ -63,7 +84,7 @@ UsersTable.propTypes = {
     onSort: PropTypes.func.isRequired,
     selectedSort: PropTypes.object.isRequired,
     onToggleBookMark: PropTypes.func.isRequired,
-    onDelete: PropTypes.func.isRequired,
+    onDelete: PropTypes.func.isRequired
 };
 
 export default UsersTable;
