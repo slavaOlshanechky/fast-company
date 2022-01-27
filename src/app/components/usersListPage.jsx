@@ -81,35 +81,29 @@ const UsersListPage = () => {
         setSearchByUserName(target.value);
         clearFilter();
     };
-    // console.log(searchByUserName);
-    // const newSearchByUserName = searchByUserName.replace(/[^a-zA-Z ]/g, "д");
 
     if (!users) return <h2>loading....</h2>;
-    // const filteredUsers =
-    //     selectedProf
-    //         ? users.filter(
-    //             (user) =>
-    //                 JSON.stringify(user.profession) ===
-    //                 JSON.stringify(selectedProf)
-    //         ) : users;
 
     const filterUsers = (users) => {
-        if (selectedProf) {
-            return users.filter(
-                (user) =>
-                    JSON.stringify(user.profession) ===
-                    JSON.stringify(selectedProf)
-            );
-        } else if (searchByUserName) {
-            return users.filter((user) =>
-                user.name
-                    .trim()
-                    .toLowerCase()
-                    .includes(searchByUserName.trim().toLowerCase())
-            );
-        } else {
-            // const users = [];
-            return users;
+        try {
+            if (selectedProf) {
+                return users.filter(
+                    (user) =>
+                        JSON.stringify(user.profession) ===
+                        JSON.stringify(selectedProf)
+                );
+            } else if (searchByUserName) {
+                return users.filter((user) =>
+                    user.name
+                        .trim()
+                        .toLowerCase()
+                        .includes(searchByUserName.trim().toLowerCase())
+                );
+            } else {
+                return users;
+            }
+        } catch (e) {
+            console.log(e);
         }
     };
 
@@ -122,9 +116,9 @@ const UsersListPage = () => {
 
     if (users.length === 0) return <h2>No users left</h2>;
 
-    if (!count) {
-        clearFilter();
-    }
+    // if (!count) {
+    //     clearFilter();
+    // }
 
     return (
         <div className="d-flex">
@@ -176,6 +170,5 @@ const UsersListPage = () => {
 
 UsersListPage.propTypes = {
     users: PropTypes.array
-    // data: PropTypes.object
 };
 export default UsersListPage;

@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/fast-company.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fast-company.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/textField.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/textField.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/usersListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/usersListPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/usersTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/usersTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layouts/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layouts/users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/utils/validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/validator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +38,6 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -66,6 +58,16 @@
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\components" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\api" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="usersListPage.jsx" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/app/components/usersListPage.jsx" working-dir="$PROJECT_DIR$/src/app/components">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.usersListPage.jsx" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -120,7 +122,7 @@
       <workItem from="1643115101237" duration="4243000" />
       <workItem from="1643139710247" duration="4473000" />
       <workItem from="1643198936164" duration="10572000" />
-      <workItem from="1643274122208" duration="5901000" />
+      <workItem from="1643274122208" duration="8815000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
