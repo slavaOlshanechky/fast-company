@@ -1,13 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { validator } from "../../utils/validator";
 import TextField from "../common/form/textField";
+import api from "../../api";
+import SelectField from "../common/form/selectField";
+import RadioField from "../common/form/radioField";
 
 const RegisterForm = () => {
     const [data, setData] = useState({
         email: "",
-        password: ""
+        password: "",
+        profession: "",
+        sex: "male"
     });
+    const [professions, setProfession] = useState();
     const [errors, setErrors] = useState({});
+
+    useEffect(() => {
+        api.professions.fetchAll().then((data) => setProfession(data));
+    }, []);
 
     const handleChange = ({ target }) => {
         setData((prevState) => ({
@@ -39,6 +49,11 @@ const RegisterForm = () => {
             min: {
                 message: "Пароль должен содержать минимум 8 символов",
                 value: 8
+            }
+        },
+        profession: {
+            isRequired: {
+                message: "You should choose your profession"
             }
         }
     };
@@ -77,6 +92,33 @@ const RegisterForm = () => {
                 onChange={handleChange}
                 error={errors.password}
             />
+
+            <SelectField
+                label="Choose your profession"
+                defaultOption="Choose..."
+                options={professions}
+                onChange={handleChange}
+                value={data.profession}
+                error={errors.profession}
+            />
+            <RadioField
+                options={[
+                    {
+                        name: "Male",
+                        value: "male"
+                    }, {
+                        name: "Female",
+                        value: "female"
+                    }, {
+                        name: "Other",
+                        value: "other"
+                    }]}
+                value={data.sex}
+                name="sex"
+                onChange={handleChange}
+
+            />
+
             <button
                 type="submit"
                 disabled={!isValid}
