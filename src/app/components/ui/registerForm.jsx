@@ -73,7 +73,6 @@ const RegisterForm = () => {
         e.preventDefault();
         const isValid = validate();
         if (!isValid) return;
-        console.log(e);
     };
     return (
         <form onSubmit={handleSubmit}>
@@ -106,17 +105,19 @@ const RegisterForm = () => {
                     {
                         name: "Male",
                         value: "male"
-                    }, {
+                    },
+                    {
                         name: "Female",
                         value: "female"
-                    }, {
+                    },
+                    {
                         name: "Other",
                         value: "other"
-                    }]}
+                    }
+                ]}
                 value={data.sex}
                 name="sex"
                 onChange={handleChange}
-
             />
 
             <button

@@ -13,11 +13,17 @@ const SelectField = ({
         return "form-select" + error ? " is-invalid" : "";
     };
     const optionsArray =
-        !Array.isArray(options) && typeof (options) === "object" ?
-            Object.keys(options).map((optionName) => ({
+        !Array.isArray(options) && typeof options === "object"
+            ? Object.keys(options).map((optionName) => ({
                 name: options[optionName].name,
                 value: options[optionName]._id
-            })) : options;
+            }))
+            : (
+                options && options.map((option) => ({
+                    name: option.name,
+                    value: option._id
+                }))
+            );
 
     return (
         <div className="mb-4">
@@ -31,28 +37,19 @@ const SelectField = ({
                 value={value}
                 onChange={onChange}
             >
-                <option
-                    disabled
-                    value=""
-                >
+                <option disabled value="">
                     {defaultOption}
                 </option>
-                {
-                    optionsArray &&
-                    optionsArray.map((option) =>(
+                {optionsArray &&
+                    optionsArray.map((option) => (
                         <option key={option.value} value={option.value}>
                             {option.name}
                         </option>
-                    ))
-                }
+                    ))}
             </select>
-            {error &&
-                <div className="invalid-feedback">
-                    {error}
-                </div>}
+            {error && <div className="invalid-feedback">{error}</div>}
         </div>
     );
-
 };
 
 SelectField.propTypes = {

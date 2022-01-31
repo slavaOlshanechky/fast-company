@@ -22,7 +22,7 @@ const UsersTable = ({
         },
         qualities: {
             name: "Качества",
-            component: (user) => <Qualities qualities={user.qualities}/>
+            component: (user) => <Qualities qualities={user.qualities} />
         },
         professions: {
             path: "profession.name",
@@ -58,12 +58,14 @@ const UsersTable = ({
         }
     };
 
-    return <Table
-        onSort={onSort}
-        selectedSort={selectedSort}
-        columns={columns}
-        data={users}
-    />;
+    return (
+        <Table
+            onSort={onSort}
+            selectedSort={selectedSort}
+            columns={columns}
+            data={users}
+        />
+    );
 };
 
 UsersTable.propTypes = {

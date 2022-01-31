@@ -139,7 +139,7 @@ const UsersListPage = () => {
                 </div>
             )}
             <div className="d-flex flex-column">
-                {<SearchStatus number={count}/>}
+                {<SearchStatus number={count} />}
                 <TextField
                     name="search"
                     value={searchByUserName}

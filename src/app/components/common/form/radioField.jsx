@@ -1,19 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const RadioField = ({
-    options,
-    name,
-    onChange,
-    value,
-    label
-}) => {
-    return (<div className="mb-4 ">
-            <label className="form-label">
-                {label}
-            </label>
+const RadioField = ({ options, name, onChange, value, label }) => {
+    return (
+        <div className="mb-4 ">
+            <label className="form-label">{label}</label>
             {options.map((option) => (
-                <div key={option.name + "_" + option.value} className="form-check form-check-inline">
+                <div
+                    key={option.name + "_" + option.value}
+                    className="form-check form-check-inline"
+                >
                     <input
                         className="form-check-input"
                         type="radio"
@@ -29,15 +25,17 @@ const RadioField = ({
                     >
                         {option.name}
                     </label>
-                </div>))}
-
-        </div>);
+                </div>
+            ))}
+        </div>
+    );
 };
 RadioField.propTypes = {
     options: PropTypes.array,
+    label: PropTypes.string,
     name: PropTypes.string,
     onChange: PropTypes.func,
-    value: PropTypes.string,
+    value: PropTypes.string
 };
 
 export default RadioField;

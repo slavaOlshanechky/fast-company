@@ -1,4 +1,3 @@
 import UsersListPage from "./usersListPage";
 
-export default UsersListPage
-
+export default UsersListPage;
