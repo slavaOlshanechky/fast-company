@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/api/fake.api/qualities.api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/common/form/multiSelectField.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/common/form/radioField.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/form/radioField.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/common/form/selectField.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/form/selectField.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/common/table/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/table/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/page/userPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/userPage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/page/usersListPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/usersListPage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/page/usersListPage/usersListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/usersListPage/usersListPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/qualities/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/qualities/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/common/form/textField.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/form/textField.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/ui/registerForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/registerForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/usersTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/usersTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layouts/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/login.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +64,11 @@
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\api\fake.api" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\ui" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\page\userPage" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\page\usersListPage" />
-      <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\page" />
     </key>
   </component>
   <component name="RunManager">
@@ -139,6 +138,7 @@
       <workItem from="1643462244633" duration="11576000" />
       <workItem from="1643545206067" duration="6627000" />
       <workItem from="1643626016446" duration="12421000" />
+      <workItem from="1643715060717" duration="6954000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>

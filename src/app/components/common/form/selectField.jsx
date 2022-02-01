@@ -9,6 +9,12 @@ const SelectField = ({
     options,
     error
 }) => {
+    const handleChange = ({ target }) => {
+        onChange({
+            name: target.name,
+            value: target.value
+        });
+    };
     const getInputClasses = () => {
         return "form-select" + error ? " is-invalid" : "";
     };
@@ -17,9 +23,8 @@ const SelectField = ({
             ? Object.keys(options).map((optionName) => ({
                 name: options[optionName].name,
                 value: options[optionName]._id
-            }))
-            : (
-                options && options.map((option) => ({
+            })) :
+            (options && options.map((option) => ({
                     name: option.name,
                     value: option._id
                 }))
@@ -30,12 +35,13 @@ const SelectField = ({
             <label htmlFor="validationCustom04" className="form-label">
                 {label}
             </label>
+            <div>
             <select
                 className={getInputClasses()}
                 id="validationCustom04"
                 name="profession"
                 value={value}
-                onChange={onChange}
+                onChange={handleChange}
             >
                 <option disabled value="">
                     {defaultOption}
@@ -47,7 +53,9 @@ const SelectField = ({
                         </option>
                     ))}
             </select>
-            {error && <div className="invalid-feedback">{error}</div>}
+                {error && <div className="invalid-feedback">{error}</div>}
+
+            </div>
         </div>
     );
 };
