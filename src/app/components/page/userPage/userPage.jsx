@@ -14,8 +14,8 @@ const UserPage = ({ userId }) => {
         });
     }, []);
 
-    const handleAllUsers = () => {
-        history.push(`/users`);
+    const handleUserEdit = () => {
+        history.push(`/users/${userId}/edit`);
     };
 
     if (!user) {
@@ -29,9 +29,7 @@ const UserPage = ({ userId }) => {
             <Qualities qualities={user.qualities} />
             <p>completedMeetings: {user.completedMeetings}</p>
             <h2>Rate: {user.rate}</h2>
-            <button className="btn btn-secondary" onClick={handleAllUsers}>
-                Все пользователи
-            </button>
+            <button onClick={handleUserEdit}>Редактировать данные</button>
         </div>
     );
 };

@@ -20,7 +20,7 @@ const Login = () => {
                     {formType === "register" ? (
                         <>
                             <h3 className="mb-4">Register</h3>
-                            <RegisterForm/>
+                            <RegisterForm />
                             <p>
                                 Do you already have an account?{" "}
                                 <a role="button" onClick={toggleFormType}>
@@ -32,7 +32,7 @@ const Login = () => {
                     ) : (
                         <>
                             <h3 className="mb-4">Login</h3>
-                            <LoginForm/>
+                            <LoginForm />
                             <p>
                                 Do not have an account yet?{" "}
                                 <a role="button" onClick={toggleFormType}>

@@ -14,7 +14,7 @@ const RegisterForm = () => {
         profession: "",
         sex: "male",
         qualities: [],
-        licence:false
+        licence: false
     });
     const [qualities, setQualities] = useState({});
     const [professions, setProfession] = useState();
@@ -62,9 +62,10 @@ const RegisterForm = () => {
                 message: "You should choose your profession"
             }
         },
-        licence:{
-            isRequired:{
-                message:"You can not use our service without agree of licence agreement"
+        licence: {
+            isRequired: {
+                message:
+                    "You can not use our service without agree of licence agreement"
             }
         }
     };
@@ -106,6 +107,7 @@ const RegisterForm = () => {
             <SelectField
                 label="Choose your profession"
                 defaultOption="Choose..."
+                name="professions"
                 options={professions}
                 onChange={handleChange}
                 value={data.profession}
@@ -130,21 +132,21 @@ const RegisterForm = () => {
                 name="sex"
                 onChange={handleChange}
                 label="Choose your sex"
-
             />
             <MultiSelectField
                 options={qualities}
                 onChange={handleChange}
+                defaultValue={data.qualities}
                 name="qualities"
                 label="Choose your quality/ies"
             />
             <CheckBoxField
                 value={data.licence}
                 onChange={handleChange}
-                name='licence'
+                name="licence"
                 error={errors.licence}
-
-            >Agree <a>license agreement</a>
+            >
+                Agree <a>license agreement</a>
             </CheckBoxField>
             <button
                 type="submit"
