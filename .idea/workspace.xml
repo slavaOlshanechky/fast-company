@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/components/page/userEditPage/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/page/userEditPage/userEditPage.jsx" afterDir="false" />
+    <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
+      <change afterPath="$PROJECT_DIR$/src/app/api/fake.api/comments.api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/common/comments/addCommentForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/common/form/textAreaField.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/fake.api/professions.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/fake.api/professions.api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/fake.api/user.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/fake.api/user.api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/common/form/checkBoxField.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/form/checkBoxField.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/common/form/multiSelectField.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/form/multiSelectField.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/common/form/radioField.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/form/radioField.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/common/form/selectField.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/form/selectField.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/page/userPage/userPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/userPage/userPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/loginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/loginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/registerForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/registerForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layouts/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layouts/users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/utils/validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/validator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +29,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="21srcbmc1A7RUZtXGNp9oZiGUHm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -53,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/components/page/userEditPage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/api/fake.api" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -62,10 +52,12 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\api\fake.api" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\page\userEditPage" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\page\usersListPage" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components" />
@@ -152,7 +144,16 @@
       <workItem from="1644234729342" duration="7904000" />
       <workItem from="1644330574866" duration="8338000" />
       <workItem from="1644406271163" duration="6366000" />
-      <workItem from="1644497454578" duration="5922000" />
+      <workItem from="1644497454578" duration="6985000" />
+      <workItem from="1644667805147" duration="583000" />
+      <workItem from="1644669751739" duration="636000" />
+      <workItem from="1644671701543" duration="433000" />
+      <workItem from="1644672366880" duration="11000" />
+      <workItem from="1644693438156" duration="1121000" />
+      <workItem from="1644703548614" duration="658000" />
+      <workItem from="1646571517244" duration="2674000" />
+      <workItem from="1646655499361" duration="5878000" />
+      <workItem from="1646828345014" duration="9363000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
@@ -180,6 +181,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
