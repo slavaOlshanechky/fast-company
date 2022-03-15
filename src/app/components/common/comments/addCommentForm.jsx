@@ -4,11 +4,12 @@ import { validator } from "../../../utils/validator";
 import SelectField from "../form/selectField";
 import TextAreaField from "../form/textAreaField";
 
+const initialData = {
+    userId: "",
+    content: ""
+};
+
 const AddCommentForm = ({ onAdd }) => {
-    const initialData = {
-        userId: "",
-        content: ""
-    };
     const [data, setData] = useState(initialData);
     const [users, setUsers] = useState([]);
     const [errors, setErrors] = useState({});
@@ -43,13 +44,17 @@ const AddCommentForm = ({ onAdd }) => {
         }));
     };
 
+    const clearForm = () => {
+        setData(initialData);
+        setErrors({});
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const isValid = validate();
         if (!isValid) return;
         onAdd(data);
-        setData(initialData);
-        setErrors({});
+        clearForm();
     };
 
     return (
@@ -79,4 +84,4 @@ const AddCommentForm = ({ onAdd }) => {
         </div>
     );
 };
-export default AddCommentForm
+export default AddCommentForm;
