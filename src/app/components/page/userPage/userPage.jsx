@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
 import api from "../../../api";
 import PropTypes from "prop-types";
-import Qualities from "../../ui/qualities";
+import UserCard from "../../ui/userCard";
+import QualitiesCard from "../../ui/qualitiesCard";
+import MeetingsCard from "../../ui/meetingsCard";
+import Comments from "../../ui/comments";
 
 const UserPage = ({ userId }) => {
-    const history = useHistory();
     const [user, setUser] = useState(null);
 
     useEffect(() => {
@@ -14,22 +15,24 @@ const UserPage = ({ userId }) => {
         });
     }, []);
 
-    const handleUserEdit = () => {
-        history.push(`/users/${userId}/edit`);
-    };
-
     if (!user) {
         return <h2>Loading...</h2>;
     }
 
     return (
-        <div>
-            <h1>{user.name}</h1>
-            <h2>Профессия: {user.profession.name}</h2>
-            <Qualities qualities={user.qualities} />
-            <p>completedMeetings: {user.completedMeetings}</p>
-            <h2>Rate: {user.rate}</h2>
-            <button onClick={handleUserEdit}>Редактировать данные</button>
+        <div className="container">
+            <div className="row gutters-sm">
+                {/* left column */}
+                <div className="col-md-4 mb-3">
+                    <UserCard user={user}/>
+                    <QualitiesCard qualities={user.qualities}/>
+                    <MeetingsCard value={user.completedMeetings}/>
+                </div>
+                {/* right column */}
+                <div className="col-md-8">
+                    <Comments />
+                </div>
+            </div>
         </div>
     );
 };
