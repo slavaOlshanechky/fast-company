@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
-      <change afterPath="$PROJECT_DIR$/src/app/components/common/backHistoryButton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/common/comments/comment.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/common/comments/commentList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/common/comments/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/ui/comments.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/ui/meetingsCard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/ui/qualitiesCard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/utils/declOfNum.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/utils/displayDate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/hooks/useUsers.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/services/http.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/common/comments/addCommentForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/comments/addCommentForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/page/userEditPage/userEditPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/userEditPage/userEditPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/page/userPage/userPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/userPage/userPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/qualities/qualitiesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/qualities/qualitiesList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/searchStatus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/searchStatus.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/users.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +44,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/components/ui" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -69,11 +59,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app" />
+      <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\services" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\ui" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\ui\qualities" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\api\fake.api" />
-      <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\page\userEditPage" />
-      <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\page\usersListPage" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\ui" />
@@ -174,7 +164,9 @@
       <workItem from="1647024964212" duration="1586000" />
       <workItem from="1647084663348" duration="7486000" />
       <workItem from="1647157872723" duration="3550000" />
-      <workItem from="1647344463818" duration="6770000" />
+      <workItem from="1647344463818" duration="7498000" />
+      <workItem from="1647379156699" duration="439000" />
+      <workItem from="1648215022016" duration="3444000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
@@ -219,6 +211,17 @@
     <MESSAGE value="remove icons" />
     <MESSAGE value="edit handleDelete()" />
     <option name="LAST_COMMIT_MESSAGE" value="edit handleDelete()" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/services/http.service.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -5,11 +5,12 @@ import SelectField from "../../common/form/selectField";
 import RadioField from "../../common/form/radioField";
 import MultiSelectField from "../../common/form/multiSelectField";
 import { validator } from "../../../utils/validator";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 import BackHistoryButton from "../../common/backHistoryButton";
 
-const UserEditPage = ({ userId }) => {
+const UserEditPage = () => {
+    const { userId } = useParams();
     const [user, setUser] = useState();
     const [qualities, setQualities] = useState();
     const [professions, setProfession] = useState();
