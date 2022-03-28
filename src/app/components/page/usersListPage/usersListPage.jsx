@@ -8,8 +8,10 @@ import SearchStatus from "../../ui/searchStatus";
 import UsersTable from "../../ui/usersTable";
 import _ from "lodash";
 import TextField from "../../common/form/textField";
+import { useUser } from "../../../hooks/useUsers";
 
 const UsersListPage = () => {
+    const {users} = useUser();
     const [currentPage, setCurrentPage] = useState(1);
     const [professions, setProfession] = useState();
     const [selectedProf, setSelectedProf] = useState();
@@ -17,9 +19,8 @@ const UsersListPage = () => {
         iter: "name",
         order: "asc"
     });
-    const [users, setUsers] = useState();
+    // const [users, setUsers] = useState();
     const [searchByUserName, setSearchByUserName] = useState("");
-
     const pageSize = 8;
 
     useEffect(() => {
@@ -36,28 +37,26 @@ const UsersListPage = () => {
         setCurrentPage(1);
     }, [selectedProf]);
 
-    useEffect(() => {
-        api.users.fetchAll().then((data) => setUsers(data));
-    }, []);
-
     const handleDelete = (userId) => {
-        setUsers((prevState) =>
-            prevState.filter((user) => user._id !== userId)
-        );
+        // setUsers((prevState) =>
+        //     prevState.filter((user) => user._id !== userId)
+        // );
+        console.log(userId);
     };
 
     const handleToggleBookMark = (id) => {
-        setUsers(
-            users.map((user) => {
-                if (user._id === id) {
-                    return {
-                        ...user,
-                        bookmark: !user.bookmark
-                    };
-                }
-                return user;
-            })
-        );
+        // setUsers(
+        //     users.map((user) => {
+        //         if (user._id === id) {
+        //             return {
+        //                 ...user,
+        //                 bookmark: !user.bookmark
+        //             };
+        //         }
+        //         return user;
+        //     })
+        // );
+        console.log("newArray");
     };
 
     const handlePageChange = (pageIndex) => {
@@ -139,7 +138,7 @@ const UsersListPage = () => {
                 </div>
             )}
             <div className="d-flex flex-column">
-                {<SearchStatus number={count} />}
+                {<SearchStatus number={count}/>}
                 <TextField
                     name="search"
                     value={searchByUserName}
