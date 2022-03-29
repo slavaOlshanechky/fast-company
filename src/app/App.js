@@ -5,7 +5,8 @@ import Main from "./layouts/main";
 import Login from "./layouts/login";
 import Users from "./layouts/users";
 import { ToastContainer } from "react-toastify";
-import { ProfessionProvider } from "./hooks/useProfession";
+import { ProfessionProvider } from "./hooks/useProfessions";
+import { QualityProvider } from "./hooks/useQualities";
 
 function App() {
     return (
@@ -13,10 +14,13 @@ function App() {
             <Navbar/>
             <Switch>
                 <Route path="/" exact component={Main}/>
-                <ProfessionProvider>
-                <Route path="/login/:type?" component={Login}/>
-                <Route path="/users/:userId?/:userParam?" component={Users}/>
-                </ProfessionProvider>
+                <QualityProvider>
+                    <ProfessionProvider>
+                        <Route path="/login/:type?" component={Login}/>
+                        <Route path="/users/:userId?/:userParam?" component={Users}/>
+                    </ProfessionProvider>
+                </QualityProvider>
+
                 {/* <Route path="/users/:userId?" component={Users} /> */}
                 <Redirect to="/"/>
             </Switch>
