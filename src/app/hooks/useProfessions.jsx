@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 const ProfessionContext = React.createContext();
 
-export const useProfession = () => {
+export const useProfessions = () => {
     return useContext(ProfessionContext);
 };
 
@@ -22,10 +22,13 @@ export const ProfessionProvider = ({ children }) => {
     }, [error]);
 
     useEffect(() => {
-        getProfessions();
+        getProfessionsList();
     }, [])
 
-    async function getProfessions() {
+    function getProfession(id) {
+        return professions.find((p)=>p._id===id)
+    }
+    async function getProfessionsList() {
         try {
             const { content } = await professionService.get();
             setProfessions(content);
@@ -40,7 +43,7 @@ export const ProfessionProvider = ({ children }) => {
 
     }
     return (
-        <ProfessionContext.Provider value={{isLoading,professions}}>
+        <ProfessionContext.Provider value={{isLoading,professions,getProfession}}>
             {children}
         </ProfessionContext.Provider>
     );
