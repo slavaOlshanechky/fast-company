@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
-      <change afterPath="$PROJECT_DIR$/src/app/components/ui/profession.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/hooks/useQualities.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/services/quality.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/utils/mockData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/qualities/qualitiesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/qualities/qualitiesList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/qualities/quality.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/qualities/quality.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/usersTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/usersTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hooks/useProfession.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useProfessions.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/http.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/http.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,11 +64,11 @@
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\api\fake.api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\ui" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\api\fake.api" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\page\userEditPage" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components" />
-      <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\page\userPage" />
     </key>
   </component>
   <component name="RunManager">
@@ -174,7 +169,10 @@
       <workItem from="1648382155230" duration="4394000" />
       <workItem from="1648395922304" duration="2305000" />
       <workItem from="1648469531761" duration="11084000" />
-      <workItem from="1648553192045" duration="5963000" />
+      <workItem from="1648553192045" duration="8104000" />
+      <workItem from="1648636665152" duration="7135000" />
+      <workItem from="1648669978981" duration="4183000" />
+      <workItem from="1648723502004" duration="4313000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
@@ -219,16 +217,6 @@
     <MESSAGE value="remove icons" />
     <MESSAGE value="edit handleDelete()" />
     <option name="LAST_COMMIT_MESSAGE" value="edit handleDelete()" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/services/http.service.js</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

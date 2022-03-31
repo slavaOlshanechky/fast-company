@@ -12,18 +12,17 @@ function App() {
     return (
         <div>
             <Navbar/>
-            <Switch>
-                <Route path="/" exact component={Main}/>
-                <QualityProvider>
-                    <ProfessionProvider>
+            <QualityProvider>
+                <ProfessionProvider>
+                    <Switch>
+                        <Route path="/" exact component={Main}/>
                         <Route path="/login/:type?" component={Login}/>
                         <Route path="/users/:userId?/:userParam?" component={Users}/>
-                    </ProfessionProvider>
-                </QualityProvider>
-
-                {/* <Route path="/users/:userId?" component={Users} /> */}
-                <Redirect to="/"/>
-            </Switch>
+                        <Redirect to="/"/>
+                    </Switch>
+                </ProfessionProvider>
+            </QualityProvider>
+            {/* <Route path="/users/:userId?" component={Users} /> */}
             <ToastContainer/>
         </div>
     );
