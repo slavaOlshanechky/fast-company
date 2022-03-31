@@ -9,7 +9,6 @@ axios.interceptors.request.use(function (config) {
     if (configFile.isFireBase) {
         const containSlash = /\/$/gi.test(config.url);
         config.url = (containSlash ? config.url.slice(0, -1) : config.url) + ".json";
-        console.log(config.url);
     }
     return config;
 }, function (error) {
@@ -30,7 +29,6 @@ axios.interceptors.response.use(
                 content: transformData(res.data)
             };
         }
-        console.log(res.data);
         return res;
     },
     function (error) {

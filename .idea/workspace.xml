@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
+      <change afterPath="$PROJECT_DIR$/src/app/utils/mockData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/main.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/services/http.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/http.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,6 +171,8 @@
       <workItem from="1648469531761" duration="11084000" />
       <workItem from="1648553192045" duration="8104000" />
       <workItem from="1648636665152" duration="7135000" />
+      <workItem from="1648669978981" duration="4183000" />
+      <workItem from="1648723502004" duration="4313000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
