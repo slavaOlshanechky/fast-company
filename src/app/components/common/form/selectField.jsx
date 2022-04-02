@@ -19,17 +19,42 @@ const SelectField = ({
     const getInputClasses = () => {
         return "form-select" + error ? " is-invalid" : "";
     };
+    //My version
+    // const optionsArray =
+    //     !Array.isArray(options) && typeof options === "object"
+    //         ? Object.keys(options).map((optionName) => ({
+    //             name: options[optionName].name,
+    //             value: options[optionName]._id
+    //         }))
+    //         : options &&
+    //         options.map((option) => ({
+    //             name: option.name,
+    //             value: option._id
+    //         }));
+
+    //Roman version
+    // let optionsArray = [];
+    // if (!Array.isArray(options) && typeof options === "object") {
+    //     optionsArray = Object.keys(options).map((optionName) => ({
+    //         name: options[optionName].name,
+    //         value: options[optionName]._id
+    //     }));
+    // }
+    // if (Array.isArray(options)) {
+    //     optionsArray = options.map((option) => ({
+    //         name: option.name,
+    //         value: option._id
+    //     }));
+    // }
+
+    //Vasiliy version
     const optionsArray =
         !Array.isArray(options) && typeof options === "object"
             ? Object.keys(options).map((optionName) => ({
-                  name: options[optionName].name,
-                  value: options[optionName]._id
-              }))
-            : options &&
-              options.map((option) => ({
-                  name: option.name,
-                  value: option._id
-              }));
+                name: options[optionName].label,
+                value: options[optionName].value
+            }))
+            : options;
 
     return (
         <div className="mb-4">
@@ -49,7 +74,7 @@ const SelectField = ({
                 {optionsArray &&
                     optionsArray.map((option) => (
                         <option key={option.value} value={option.value}>
-                            {option.name}
+                            {option.label}
                         </option>
                     ))}
             </select>
@@ -57,6 +82,10 @@ const SelectField = ({
         </div>
     );
 };
+
+// SelectField.defaultProps = {
+//     defaultOption: "Выберите..."
+// };
 
 SelectField.propTypes = {
     defaultOption: PropTypes.string,

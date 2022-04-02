@@ -35,14 +35,12 @@ export const QualityProvider = ({ children }) => {
             setLoading(false);
         } catch (error) {
             errorCatcher(error);
-
         }
     }
 
     function errorCatcher(error) {
         const { message } = error.response.data;
         setError(message);
-
     }
 
     useEffect(() => {

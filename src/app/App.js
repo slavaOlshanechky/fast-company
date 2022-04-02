@@ -5,7 +5,7 @@ import Main from "./layouts/main";
 import Login from "./layouts/login";
 import Users from "./layouts/users";
 import { ToastContainer } from "react-toastify";
-import { ProfessionProvider } from "./hooks/useProfessions";
+import { ProfessionProvider } from "./hooks/useProfession";
 import { QualityProvider } from "./hooks/useQualities";
 
 function App() {
