@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
+      <change afterPath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/common/form/multiSelectField.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/form/multiSelectField.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/common/form/selectField.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/form/selectField.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/profession.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/profession.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/ui/registerForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/registerForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hooks/useProfessions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useProfession.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hooks/useQualities.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useQualities.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +173,8 @@
       <workItem from="1648669978981" duration="4183000" />
       <workItem from="1648723502004" duration="4313000" />
       <workItem from="1648844170753" duration="1937000" />
-      <workItem from="1648894534376" duration="13032000" />
+      <workItem from="1648894534376" duration="13362000" />
+      <workItem from="1648979423592" duration="921000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>

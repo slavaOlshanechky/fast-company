@@ -32,10 +32,7 @@ const RegisterForm = () => {
         )
     );
     const [errors, setErrors] = useState({});
-    // useEffect(() => {
-    //     api.professions.fetchAll().then((data) => setProfession(data));
-    //     api.qualities.fetchAll().then((data) => setQualities(data));
-    // }, []);
+
     const handleChange = (target) => {
         setData((prevState) => ({
             ...prevState,
