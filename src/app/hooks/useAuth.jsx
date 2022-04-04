@@ -34,7 +34,6 @@ const AuthProvider = ({ children }) => {
                 _id: data.localId,
                 email, ...rest
             });
-            console.log(data);
         } catch (error) {
             errorCatcher(error);
             const {
