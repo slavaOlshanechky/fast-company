@@ -4,6 +4,7 @@ import axios from "axios";
 import userService from "../services/user.service";
 import { toast } from "react-toastify";
 import { setTokens } from "../services/localStorage.service";
+
 const httpAuth = axios.create();
 const AuthContext = React.createContext();
 
@@ -14,8 +15,6 @@ export const useAuth = () => {
 const AuthProvider = ({ children }) => {
     const [currentUser, setUser] = useState({});
     const [error, setError] = useState(null);
-
-
 
     async function signUp({
         email,
@@ -38,8 +37,17 @@ const AuthProvider = ({ children }) => {
             console.log(data);
         } catch (error) {
             errorCatcher(error);
+            const {
+                code,
+                message
+            } = error.response.data.error;
+            if (code === 400) {
+                if (message === "EMAIL_EXISTS") {
+                    const errorObject = { email: "User with this Email exists. Choose another one." };
+                    throw errorObject;
+                }
+            }
         }
-
     };
 
     async function createUser(data) {
