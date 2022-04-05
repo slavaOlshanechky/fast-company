@@ -99,7 +99,7 @@ const LoginForm = () => {
             </CheckBoxField>
             <button
                 type="submit"
-                disabled={!isValid||(errors===null)}
+                disabled={!isValid}
                 className="btn btn-primary w-100 mx-auto"
             >
                 Submit
