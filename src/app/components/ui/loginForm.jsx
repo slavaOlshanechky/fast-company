@@ -2,14 +2,19 @@ import React, { useEffect, useState } from "react";
 import TextField from "../common/form/textField";
 import { validator } from "../../utils/validator";
 import CheckBoxField from "../common/form/checkBoxField";
+import { useAuth } from "../../hooks/useAuth";
+import { useHistory } from "react-router-dom";
 // import * as yup from 'yup'
 
 const LoginForm = () => {
+    const history = useHistory();
     const [data, setData] = useState({
         email: "",
         password: "",
         stayOn: false
     });
+
+    const { signIn } = useAuth();
     const [errors, setErrors] = useState({});
 
     const handleChange = (target) => {
@@ -33,25 +38,11 @@ const LoginForm = () => {
         email: {
             isRequired: {
                 message: "Электронная почта обязательна для заполнения"
-            },
-            isEmail: {
-                message: "Email введен не корректно"
             }
         },
         password: {
             isRequired: {
                 message: "Пароль обязателен для заполнения"
-            },
-            isCapitalSymbol: {
-                message:
-                    "Пароль должен содержать как минимум одну заглавную букву"
-            },
-            isContainDigit: {
-                message: "Пароль должен содержать как минимум одну цифру"
-            },
-            min: {
-                message: "Пароль должен содержать минимум 8 символов",
-                value: 8
             }
         }
     };
@@ -71,11 +62,16 @@ const LoginForm = () => {
     };
 
     const isValid = Object.keys(errors).length === 0;
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const isValid = validate();
         if (!isValid) return;
-        console.log(e);
+        try {
+            await signIn(data);
+            history.push("/");
+        } catch (error) {
+            setErrors(error);
+        }
     };
     return (
         <form onSubmit={handleSubmit}>
@@ -103,7 +99,7 @@ const LoginForm = () => {
             </CheckBoxField>
             <button
                 type="submit"
-                disabled={!isValid}
+                disabled={!isValid||(errors===null)}
                 className="btn btn-primary w-100 mx-auto"
             >
                 Submit
