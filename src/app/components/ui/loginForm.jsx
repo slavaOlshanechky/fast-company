@@ -38,25 +38,11 @@ const LoginForm = () => {
         email: {
             isRequired: {
                 message: "Электронная почта обязательна для заполнения"
-            },
-            isEmail: {
-                message: "Email введен не корректно"
             }
         },
         password: {
             isRequired: {
                 message: "Пароль обязателен для заполнения"
-            },
-            isCapitalSymbol: {
-                message:
-                    "Пароль должен содержать как минимум одну заглавную букву"
-            },
-            isContainDigit: {
-                message: "Пароль должен содержать как минимум одну цифру"
-            },
-            min: {
-                message: "Пароль должен содержать минимум 8 символов",
-                value: 8
             }
         }
     };
@@ -113,7 +99,7 @@ const LoginForm = () => {
             </CheckBoxField>
             <button
                 type="submit"
-                disabled={!isValid}
+                disabled={!isValid||(errors===null)}
                 className="btn btn-primary w-100 mx-auto"
             >
                 Submit
