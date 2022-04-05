@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/registerForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/registerForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ui/loginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/loginForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +175,8 @@
       <workItem from="1648894534376" duration="13362000" />
       <workItem from="1648979423592" duration="10581000" />
       <workItem from="1649071845453" duration="1135000" />
-      <workItem from="1649073076916" duration="5881000" />
+      <workItem from="1649073076916" duration="6283000" />
+      <workItem from="1649158582220" duration="3689000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>

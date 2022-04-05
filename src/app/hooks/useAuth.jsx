@@ -32,7 +32,8 @@ const AuthProvider = ({ children }) => {
             setTokens(data);
             await createUser({
                 _id: data.localId,
-                email, ...rest
+                email,
+                ...rest
             });
         } catch (error) {
             errorCatcher(error);
@@ -43,6 +44,37 @@ const AuthProvider = ({ children }) => {
             if (code === 400) {
                 if (message === "EMAIL_EXISTS") {
                     const errorObject = { email: "User with this Email exists. Choose another one." };
+                    throw errorObject;
+                }
+            }
+        }
+    };
+
+    async function signIn({
+        email,
+        password
+    }) {
+        const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.REACT_APP_FIREBASE_KEY}`;
+        try {
+            const { data } = await httpAuth.post(url, {
+                email,
+                password,
+                returnSecureToken: true
+            });
+            setTokens(data);
+        } catch (error) {
+            errorCatcher(error);
+            const {
+                code,
+                message
+            } = error.response.data.error;
+
+            if (code === 400) {
+                if (message === "EMAIL_NOT_FOUND") {
+                    const errorObject = { email: "There is no user record corresponding to this identifier. The user may have been deleted." };
+                    throw errorObject;
+                } else if (message === "INVALID_PASSWORD") {
+                    const errorObject = { password: "The password is invalid or the user does not have a password." };
                     throw errorObject;
                 }
             }
@@ -73,6 +105,7 @@ const AuthProvider = ({ children }) => {
     return (
         <AuthContext.Provider value={{
             signUp,
+            signIn,
             currentUser
         }}>
             {children}
