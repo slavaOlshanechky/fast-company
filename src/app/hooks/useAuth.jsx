@@ -21,6 +21,9 @@ const AuthProvider = ({ children }) => {
     const [currentUser, setUser] = useState({});
     const [error, setError] = useState(null);
 
+    function randomInt(min,max) {
+        return Math.floor(Math.random()*(max-min+1)+min)
+    }
     async function signUp({
         email,
         password,
@@ -37,6 +40,8 @@ const AuthProvider = ({ children }) => {
             await createUser({
                 _id: data.localId,
                 email,
+                rate:randomInt(1,5),
+                completedMeetings:randomInt(0,200),
                 ...rest
             });
         } catch (error) {
