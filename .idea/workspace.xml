@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
-      <change afterPath="$PROJECT_DIR$/src/app/components/ui/navProfile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/common/protectedRoute.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +179,7 @@
       <workItem from="1649158582220" duration="7153000" />
       <workItem from="1649244919405" duration="10612000" />
       <workItem from="1649330242730" duration="3274000" />
-      <workItem from="1649430456392" duration="5159000" />
+      <workItem from="1649430456392" duration="6372000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
