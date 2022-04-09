@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/common/protectedRoute.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/protectedRoute.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ui/loginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/loginForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +179,8 @@
       <workItem from="1649158582220" duration="7153000" />
       <workItem from="1649244919405" duration="10612000" />
       <workItem from="1649330242730" duration="3274000" />
-      <workItem from="1649430456392" duration="8303000" />
+      <workItem from="1649430456392" duration="9179000" />
+      <workItem from="1649503758548" duration="625000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
