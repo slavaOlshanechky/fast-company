@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/page/usersListPage/usersListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/usersListPage/usersListPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/usersTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/usersTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/page/userPage/userPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/userPage/userPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/hooks/useUsers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useUsers.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +181,7 @@
       <workItem from="1649330242730" duration="3274000" />
       <workItem from="1649430456392" duration="9179000" />
       <workItem from="1649503758548" duration="5294000" />
-      <workItem from="1649594830661" duration="3152000" />
+      <workItem from="1649594830661" duration="4466000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
