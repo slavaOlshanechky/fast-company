@@ -2,18 +2,21 @@ import React, { useEffect, useState } from "react";
 import Pagination from "../../common/pagination";
 import { paginate } from "../../../utils/paginate";
 import PropTypes from "prop-types";
-import api from "../../../api";
 import GroupList from "../../common/groupList";
 import SearchStatus from "../../ui/searchStatus";
 import UsersTable from "../../ui/usersTable";
 import _ from "lodash";
 import TextField from "../../common/form/textField";
 import { useUser } from "../../../hooks/useUsers";
+import { useProfession } from "../../../hooks/useProfession";
 
 const UsersListPage = () => {
-    const {users} = useUser();
+    const { users } = useUser();
+    const {
+        isLoading:professionsLoading,
+        professions
+    } = useProfession();
     const [currentPage, setCurrentPage] = useState(1);
-    const [professions, setProfession] = useState();
     const [selectedProf, setSelectedProf] = useState();
     const [sortBy, setSortBy] = useState({
         iter: "name",
@@ -22,16 +25,6 @@ const UsersListPage = () => {
     // const [users, setUsers] = useState();
     const [searchByUserName, setSearchByUserName] = useState("");
     const pageSize = 8;
-
-    useEffect(() => {
-        api.professions.fetchAll().then((data) =>
-            setProfession(
-                data
-                // first method of clearing the filter which doesn't work with arrays
-                // Object.assign(data, {allProfession: {name: "All professions"}})
-            )
-        );
-    }, []);
 
     useEffect(() => {
         setCurrentPage(1);
@@ -115,13 +108,9 @@ const UsersListPage = () => {
 
     if (users.length === 0) return <h2>No users left</h2>;
 
-    // if (!count) {
-    //     clearFilter();
-    // }
-
     return (
         <div className="d-flex">
-            {professions && (
+            {professions && !professionsLoading&&(
                 <div className="d-flex flex-column flex-shrink-0 p-3">
                     <GroupList
                         selectedItem={selectedProf}

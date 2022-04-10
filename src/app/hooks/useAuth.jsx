@@ -52,7 +52,7 @@ const AuthProvider = ({ children }) => {
                 email,
                 rate: randomInt(1, 5),
                 completedMeetings: randomInt(0, 200),
-                image:`https://avatars.dicebear.com/api/avataaars/${(
+                image: `https://avatars.dicebear.com/api/avataaars/${(
                     Math.random() + 1
                 )
                     .toString(36)
@@ -128,7 +128,6 @@ const AuthProvider = ({ children }) => {
         } finally {
             setLoading(false);
         }
-
     }
 
     useEffect(() => {
