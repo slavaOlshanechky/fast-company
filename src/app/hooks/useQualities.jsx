@@ -16,7 +16,7 @@ export const QualityProvider = ({ children }) => {
     useEffect(() => {
         if (error != null) {
             toast(error);
-            setError(error);
+            setError(null);
         }
     }, [error]);
 

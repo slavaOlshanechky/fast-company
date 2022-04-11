@@ -51,8 +51,10 @@ const SelectField = ({
     const optionsArray =
         !Array.isArray(options) && typeof options === "object"
             ? Object.keys(options).map((optionName) => ({
-                name: options[optionName].label,
-                value: options[optionName].value
+                // name: options[optionName].label,
+                // value: options[optionName].value
+                name: options[optionName].name,
+                value: options[optionName]._id
             }))
             : options;
 
