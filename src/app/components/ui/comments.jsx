@@ -5,10 +5,12 @@ import { orderBy } from "lodash";
 import AddCommentForm from "../common/comments/addCommentForm";
 import CommentList from "../common/comments/commentList";
 import { useParams } from "react-router-dom";
+import { useComments } from "../../hooks/useComments";
 
 const Comments = () => {
     const { userId } = useParams();
     const [comments, setComments] = useState([]);
+    const { createComment } = useComments();
 
     useEffect(() => {
         api.comments.fetchCommentsForUser(userId).then((data) => setComments(data));
@@ -23,24 +25,25 @@ const Comments = () => {
             console.log(error);
         }
     };
-    const handleAddComment = async (data) => {
-        try {
-            await api.comments
-                .add({
-                    ...data,
-                    pageId: userId
-                })
-                .then((data) => setComments([...comments, data]));
-        } catch (error) {
-            console.log(error);
-        }
+    const handleSubmit = async (data) => {
+        // try {
+        //     await api.comments
+        //         .add({
+        //             ...data,
+        //             pageId: userId
+        //         })
+        //         .then((data) => setComments([...comments, data]));
+        // } catch (error) {
+        //     console.log(error);
+        // }
+        createComment(data)
     };
     const sortedComments = orderBy(comments, ["created_at"], ["desc"]);
     return (
         <>
             <div className="card mb-2">
                 <div className="card-body">
-                    <AddCommentForm pageId={userId} onAdd={handleAddComment}/>
+                    <AddCommentForm pageId={userId} onAdd={handleSubmit}/>
                 </div>
             </div>
             {comments.length > 0 && (
