@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
-      <change afterPath="$PROJECT_DIR$/src/app/services/comment.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/hooks/useComments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useComments.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hooks/useProfession.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useProfession.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/comment.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/comment.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +184,7 @@
       <workItem from="1649503758548" duration="5294000" />
       <workItem from="1649594830661" duration="7773000" />
       <workItem from="1649675941935" duration="9227000" />
-      <workItem from="1649760598575" duration="7061000" />
+      <workItem from="1649760598575" duration="9980000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
