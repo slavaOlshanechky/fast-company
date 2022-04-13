@@ -1,49 +1,28 @@
-import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import api from "../../api";
+import React from "react";
 import { orderBy } from "lodash";
-import AddCommentForm from "../common/comments/addCommentForm";
 import CommentList from "../common/comments/commentList";
-import { useParams } from "react-router-dom";
 import { useComments } from "../../hooks/useComments";
+import { AddCommentForm } from "../common/comments";
 
 const Comments = () => {
-    const { userId } = useParams();
-    const [comments, setComments] = useState([]);
-    const { createComment } = useComments();
-
-    useEffect(() => {
-        api.comments.fetchCommentsForUser(userId).then((data) => setComments(data));
-    }, []);
+    const {
+        createComment,
+        comments,
+        removeComment
+    } = useComments();
 
     const handleRemoveComment = async (id) => {
-        try {
-            await api.comments.remove(id);
-            setComments((prevState) =>
-                prevState.filter((comment) => comment._id !== id));
-        } catch (error) {
-            console.log(error);
-        }
+        removeComment(id);
     };
     const handleSubmit = async (data) => {
-        // try {
-        //     await api.comments
-        //         .add({
-        //             ...data,
-        //             pageId: userId
-        //         })
-        //         .then((data) => setComments([...comments, data]));
-        // } catch (error) {
-        //     console.log(error);
-        // }
-        createComment(data)
+        createComment(data);
     };
     const sortedComments = orderBy(comments, ["created_at"], ["desc"]);
     return (
         <>
             <div className="card mb-2">
                 <div className="card-body">
-                    <AddCommentForm pageId={userId} onAdd={handleSubmit}/>
+                    <AddCommentForm onAdd={handleSubmit}/>
                 </div>
             </div>
             {comments.length > 0 && (
@@ -62,8 +41,8 @@ const Comments = () => {
     );
 };
 
-Comments.propTypes = {
-    userId: PropTypes.string
-};
+// Comments.propTypes = {
+//     userId: PropTypes.string
+// };
 
 export default Comments;
