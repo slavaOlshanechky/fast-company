@@ -11,6 +11,7 @@ const Comments = () => {
         removeComment
     } = useComments();
 
+    //Where from id ?
     const handleRemoveComment = async (id) => {
         removeComment(id);
     };
@@ -40,9 +41,5 @@ const Comments = () => {
         </>
     );
 };
-
-// Comments.propTypes = {
-//     userId: PropTypes.string
-// };
 
 export default Comments;

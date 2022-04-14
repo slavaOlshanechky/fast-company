@@ -5,8 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/common/comments/comment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/comments/comment.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/ui/comments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/comments.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hooks/useComments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useComments.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/comment.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/comment.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +184,8 @@
       <workItem from="1649594830661" duration="7773000" />
       <workItem from="1649675941935" duration="9227000" />
       <workItem from="1649760598575" duration="10421000" />
-      <workItem from="1649858249389" duration="5011000" />
+      <workItem from="1649858249389" duration="5655000" />
+      <workItem from="1649933667675" duration="3948000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
