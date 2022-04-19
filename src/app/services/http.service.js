@@ -16,6 +16,7 @@ http.interceptors.request.use(async function (config) {
         config.url = (containSlash ? config.url.slice(0, -1) : config.url) + ".json";
         const expiresDate = localStorageService.getTokenExpiresDate();
         const refreshToken = localStorageService.getRefreshToken();
+        
         if (refreshToken && expiresDate < Date.now()) {
             const { data } = await httpAuth.post("token", {
                 grant_type: "refresh_token",
@@ -23,14 +24,20 @@ http.interceptors.request.use(async function (config) {
             });
 
             localStorageService.setTokens({
-                refreshToken:data.refresh_token,
-                idToken:data.id_token,
-                expiresIn:data.expires_in,
-                localId:data.user_id
-            })
+                refreshToken: data.refresh_token,
+                idToken: data.id_token,
+                expiresIn: data.expires_in,
+                localId: data.user_id
+            });
 
         }
-        // httpAuth
+        const accessToken = localStorageService.getAccessToken();
+        if (accessToken) {
+            config.params = {
+                ...config.params,
+                auth: accessToken
+            };
+        }
     }
     return config;
 }, function (error) {
@@ -68,5 +75,6 @@ const httpService = {
     post: http.post,
     put: http.put,
     delete: http.delete,
+    patch:http.patch
 };
 export default httpService;

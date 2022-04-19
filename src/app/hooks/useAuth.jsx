@@ -4,6 +4,7 @@ import axios from "axios";
 import userService from "../services/user.service";
 import { toast } from "react-toastify";
 import localStorageService, { setTokens } from "../services/localStorage.service";
+import { useHistory } from "react-router-dom";
 
 export const httpAuth = axios.create({
     baseURL: "https://identitytoolkit.googleapis.com/v1/",
@@ -18,8 +19,16 @@ export const useAuth = () => {
 };
 
 const AuthProvider = ({ children }) => {
-    const [currentUser, setUser] = useState({});
+    const [currentUser, setUser] = useState();
     const [error, setError] = useState(null);
+    const [isLoading, setLoading] = useState(true);
+    const history = useHistory();
+
+    function logOut() {
+        localStorageService.removeAuthData();
+        setUser(null);
+        history.push("/");
+    }
 
     function randomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
@@ -43,6 +52,11 @@ const AuthProvider = ({ children }) => {
                 email,
                 rate: randomInt(1, 5),
                 completedMeetings: randomInt(0, 200),
+                image: `https://avatars.dicebear.com/api/avataaars/${(
+                    Math.random() + 1
+                )
+                    .toString(36)
+                    .substring(7)}.svg`,
                 ...rest
             });
         } catch (error) {
@@ -111,14 +125,23 @@ const AuthProvider = ({ children }) => {
             setUser(content);
         } catch (error) {
             errorCatcher(error);
-
+        } finally {
+            setLoading(false);
         }
-
     }
-
+    async function updateUserData(data) {
+        try {
+            const { content } = await userService.update(data);
+            setUser(content);
+        } catch (error) {
+            errorCatcher(error);
+        }
+    }
     useEffect(() => {
         if (localStorageService.getAccessToken()) {
             getUserData();
+        } else {
+            setLoading(false);
         }
     }, []);
 
@@ -133,9 +156,11 @@ const AuthProvider = ({ children }) => {
         <AuthContext.Provider value={{
             signUp,
             signIn,
-            currentUser
+            currentUser,
+            logOut,
+            updateUserData
         }}>
-            {children}
+            {!isLoading ? children : "Loading..."}
         </AuthContext.Provider>
     );
 };

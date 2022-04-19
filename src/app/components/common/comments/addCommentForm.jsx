@@ -1,29 +1,12 @@
-import React, { useEffect, useState } from "react";
-import api from "../../../api";
+import React, { useState } from "react";
 import { validator } from "../../../utils/validator";
-import SelectField from "../form/selectField";
 import TextAreaField from "../form/textAreaField";
 
-const initialData = {
-    userId: "",
-    content: ""
-};
-
 const AddCommentForm = ({ onAdd }) => {
-    const [data, setData] = useState(initialData);
-    const [users, setUsers] = useState([]);
+    const [data, setData] = useState({});
     const [errors, setErrors] = useState({});
 
-    useEffect(() => {
-        api.users.fetchAll().then((data) => setUsers(data));
-    }, []);
-
     const validatorConfig = {
-        userId: {
-            isRequired: {
-                message: "Choose user name"
-            }
-        },
         content: {
             isRequired: {
                 message: "Fill the comment"
@@ -45,7 +28,7 @@ const AddCommentForm = ({ onAdd }) => {
     };
 
     const clearForm = () => {
-        setData(initialData);
+        setData({});
         setErrors({});
     };
 
@@ -62,19 +45,11 @@ const AddCommentForm = ({ onAdd }) => {
             <h2>New comment</h2>
             <form onSubmit={handleSubmit}></form>
             <div className="mb-4">
-                <SelectField
-                    value={data.userId}
-                    onChange={handleChange}
-                    name="userId"
-                    options={users}
-                    error={errors.userId}
-                    defaultOption="Choose user"
-                />
             </div>
             <TextAreaField
                 label="Сообщение"
                 name="content"
-                value={data.content}
+                value={data.content || ""}
                 onChange={handleChange}
                 error={errors.content}
             />
