@@ -11,28 +11,28 @@ const UserPage = ({ userId }) => {
     const { getUserById } = useUser();
     const user = getUserById(userId);
 
-    if (!user) {
-        return <h2>Loading...</h2>;
-    }
-
-    return (
-        <div className="container">
-            <div className="row gutters-sm">
-                {/* left column */}
-                <div className="col-md-4 mb-3">
-                    <UserCard user={user}/>
-                    <QualitiesCard data={user.qualities}/>
-                    <MeetingsCard value={user.completedMeetings}/>
-                </div>
-                {/* right column */}
-                <div className="col-md-8">
-                    <CommentsProvider>
-                        <Comments/>
-                    </CommentsProvider>
+    if (user) {
+        return (
+            <div className="container">
+                <div className="row gutters-sm">
+                    {/* left column */}
+                    <div className="col-md-4 mb-3">
+                        <UserCard user={user} />
+                        <QualitiesCard data={user.qualities} />
+                        <MeetingsCard value={user.completedMeetings} />
+                    </div>
+                    {/* right column */}
+                    <div className="col-md-8">
+                        <CommentsProvider>
+                            <Comments />
+                        </CommentsProvider>
+                    </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    } else {
+        return <h1>Loading</h1>;
+    }
 };
 
 UserPage.propTypes = {

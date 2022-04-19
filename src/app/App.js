@@ -22,7 +22,7 @@ function App() {
                         <Route path="/" exact component={Main}/>
                         <Route path="/login/:type?" component={Login}/>
                         <Route path="/logout" component={LogOut}/>
-                        <ProtectedRoute path="/users/:userId?/:userParam?" component={Users}/>
+                        <ProtectedRoute path="/users/:userId?/:edit?" component={Users}/>
                         <Redirect to="/"/>
                     </Switch>
                 </ProfessionProvider>

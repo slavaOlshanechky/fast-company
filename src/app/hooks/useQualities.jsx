@@ -20,32 +20,28 @@ export const QualityProvider = ({ children }) => {
         }
     }, [error]);
 
-    useEffect(() => {
-        getQualitiesList();
-    }, []);
-
     function getQuality(id) {
         return qualities.find((q) => q._id === id);
     }
 
-    async function getQualitiesList() {
-        try {
-            const { content } = await qualityService.fetchAll();
-            setQualities(content);
-            setLoading(false);
-        } catch (error) {
-            errorCatcher(error);
-        }
-    }
+    useEffect(() => {
+        const getQualities = async () => {
+            try {
+                const { content } = await qualityService.fetchAll();
+                setQualities(content);
+                setLoading(false);
+            } catch (error) {
+                errorCatcher(error);
+            }
+        };
+        getQualities();
+    }, []);
 
     function errorCatcher(error) {
         const { message } = error.response.data;
         setError(message);
     }
 
-    useEffect(() => {
-        getQualitiesList();
-    }, []);
     return (
         <QualityContext.Provider value={{
             isLoading,

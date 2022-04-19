@@ -11,7 +11,6 @@ const Comments = () => {
         removeComment
     } = useComments();
 
-    //Where from id ?
     const handleRemoveComment = async (id) => {
         removeComment(id);
     };

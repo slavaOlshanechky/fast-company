@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SPLITTER_PROPORTION" value="0.18068367" />
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Only changes uncommitted to VCS in file …\src\app\components\page\userEditPage\editUserPage.jsx" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/common/comments/comment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/comments/comment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/page/userEditPage/userEditPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/userEditPage/userEditPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/page/userPage/userPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/userPage/userPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/ui/comments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/comments.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ui/userCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/userCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/hooks/useQualities.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useQualities.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/hooks/useUsers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useUsers.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/users.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/http.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/http.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/user.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/hooks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/components/page/userEditPage" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -55,11 +69,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\page\userEditPage" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\hooks" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\services" />
-      <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\ui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app" />
@@ -185,7 +199,9 @@
       <workItem from="1649675941935" duration="9227000" />
       <workItem from="1649760598575" duration="10421000" />
       <workItem from="1649858249389" duration="5655000" />
-      <workItem from="1649933667675" duration="3948000" />
+      <workItem from="1649933667675" duration="6928000" />
+      <workItem from="1650188259527" duration="17469000" />
+      <workItem from="1650278389400" duration="9577000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>

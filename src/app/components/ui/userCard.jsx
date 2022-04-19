@@ -13,11 +13,11 @@ const UserCard = ({ user }) => {
     return (
         <div className="card mb-3">
             <div className="card-body">
-                {currentUser._id === user._id &&
+                {currentUser._id === user._id &&(
                     <button className="position-absolute top-0 end-0 btn btn-light btn-sm">
                         <i className="bi bi-gear" onClick={handleEditClick}></i>
                     </button>
-                }
+                )}
 
                 <div className="d-flex flex-column align-items-center text-center position-relative">
                     <img
