@@ -7,8 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
-      <change afterPath="$PROJECT_DIR$/src/app/store/qualities.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store/qualities.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/qualities.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +197,7 @@
       <workItem from="1650916881847" duration="897000" />
       <workItem from="1651518076584" duration="1470000" />
       <workItem from="1651521149845" duration="43000" />
-      <workItem from="1651521262541" duration="2422000" />
+      <workItem from="1651521262541" duration="3656000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
