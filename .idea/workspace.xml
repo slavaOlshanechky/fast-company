@@ -7,18 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
+      <change afterPath="$PROJECT_DIR$/src/app/store/createStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/page/userEditPage/userEditPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/userEditPage/userEditPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/page/userPage/userPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/userPage/userPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/comments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/comments.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/userCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/userCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hooks/useQualities.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useQualities.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hooks/useUsers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useUsers.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layouts/users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/http.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/http.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/user.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +48,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/components/page/userEditPage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-redux-app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -63,7 +57,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
     <property name="ts.external.directory.path" value="C:\Users\Sl\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\213.6461.79\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -201,7 +195,12 @@
       <workItem from="1649858249389" duration="5655000" />
       <workItem from="1649933667675" duration="6928000" />
       <workItem from="1650188259527" duration="17469000" />
-      <workItem from="1650278389400" duration="9577000" />
+      <workItem from="1650278389400" duration="10135000" />
+      <workItem from="1650455717392" duration="1911000" />
+      <workItem from="1650916881847" duration="897000" />
+      <workItem from="1651518076584" duration="1470000" />
+      <workItem from="1651521149845" duration="43000" />
+      <workItem from="1651521262541" duration="1727000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
@@ -242,6 +241,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/fast-company" />
+    </ignored-roots>
     <MESSAGE value="first commit" />
     <MESSAGE value="remove icons" />
     <MESSAGE value="edit handleDelete()" />
