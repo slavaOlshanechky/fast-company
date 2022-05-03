@@ -8,7 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/page/userEditPage/userEditPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/userEditPage/userEditPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ui/qualities/qualitiesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/qualities/qualitiesList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ui/qualities/quality.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/qualities/quality.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ui/registerForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/registerForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/store/qualities.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/qualities.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +57,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="ts.external.directory.path" value="C:\Users\Sl\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\213.6461.79\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -198,6 +201,7 @@
       <workItem from="1651518076584" duration="1470000" />
       <workItem from="1651521149845" duration="43000" />
       <workItem from="1651521262541" duration="3656000" />
+      <workItem from="1651575001560" duration="5850000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
