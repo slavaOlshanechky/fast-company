@@ -7,8 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
+      <change afterPath="$PROJECT_DIR$/src/app/store/professions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/store/users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/utils/isOutdated.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/qualities/qualitiesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/qualities/qualitiesList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ui/profession.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/profession.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ui/usersTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/usersTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store/createStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/createStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/store/qualities.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/qualities.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +204,8 @@
       <workItem from="1651518076584" duration="1470000" />
       <workItem from="1651521149845" duration="43000" />
       <workItem from="1651521262541" duration="3656000" />
-      <workItem from="1651575001560" duration="9304000" />
+      <workItem from="1651575001560" duration="15138000" />
+      <workItem from="1651662995728" duration="8460000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
