@@ -51,24 +51,13 @@ export const loadProfessionsList = () => async (dispatch, getState) => {
         }
     }
 };
-//
-// export const getProfessions = () => (state) => state.professions.entities;
-// export const getProfessionsLoadingStatus = () => (state) => state.professions.isLoading;
-// export const getQualitiesByIds = (qualitiesIds) => (state) => {
-//     if (state.professions.entities) {
-//         const qualitiesArray = [];
-//         for (const qualId of qualitiesIds) {
-//             for (const quality of state.qualities.entities) {
-//                 if (quality._id === qualId) {
-//                     qualitiesArray.push(quality);
-//                     break;
-//                 }
-//             }
-//         }
-//         return qualitiesArray;
-//     }
-//     return [];
-//
-// };
 
+export const getProfessions = () => (state) => state.professions.entities;
+export const getProfessionsLoadingStatus = () => (state) => state.professions.isLoading;
+export const getProfessionById = (id) => (state) => {
+    if (state.professions.entities) {
+        return state.professions.entities.find((p) => p._id === id);
+    }
+    ;
+};
 export default professionsReducer;

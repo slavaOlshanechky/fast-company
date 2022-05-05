@@ -7,12 +7,14 @@ import SearchStatus from "../../ui/searchStatus";
 import UsersTable from "../../ui/usersTable";
 import _ from "lodash";
 import TextField from "../../common/form/textField";
-import { useUser } from "../../../hooks/useUsers";
 import { useProfession } from "../../../hooks/useProfession";
 import { useAuth } from "../../../hooks/useAuth";
+import { useSelector } from "react-redux";
+import { getUsersList } from "../../../store/users";
 
 const UsersListPage = () => {
-    const { users } = useUser();
+    const users = useSelector(getUsersList());
+
     const { currentUser } = useAuth();
     const {
         isLoading: professionsLoading,
