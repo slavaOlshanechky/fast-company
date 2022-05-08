@@ -1,5 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAction, createSlice } from "@reduxjs/toolkit";
 import userService from "../services/user.service";
+import authService from "../services/auth.service";
+import localStorageService from "../services/localStorage.service";
 
 const usersSlice = createSlice({
     name: "users",
@@ -7,6 +9,8 @@ const usersSlice = createSlice({
         entities: null,
         isLoading: true,
         error: null,
+        auth: null,
+        isLoggedIn:false,
     },
     reducers: {
         usersRequested: (state) => {
@@ -20,6 +24,16 @@ const usersSlice = createSlice({
             state.error = action.payload;
             state.isLoading = false;
         },
+        authRequestSuccess: (state, action) => {
+            state.auth = {
+                ...action.payload,
+                isLoggedIn: true
+            };
+        },
+        authRequestFailed: (state, action) => {
+            state.error = action.payload;
+            state.isLoading = false;
+        },
     }
 });
 
@@ -30,8 +44,31 @@ const {
 const {
     usersRequested,
     usersReceived,
-    usersRequestFailed
+    usersRequestFailed,
+    authRequestSuccess,
+    authRequestFailed
 } = actions;
+
+const authRequested = createAction("users/authRequested");
+
+export const signUp = ({
+    email,
+    password,
+    ...rest
+}) => async (dispatch) => {
+    dispatch(authRequested);
+
+    try {
+        const data = await authService.register({
+            email,
+            password
+        });
+        localStorageService.setTokens(data);
+        dispatch(authRequestSuccess({ userId: data.localId }));
+    } catch (error) {
+        dispatch(authRequestFailed(error.message))
+    }
+};
 
 export const loadUsersList = () => async (dispatch) => {
     dispatch(usersRequested());

@@ -7,10 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
+      <change afterPath="$PROJECT_DIR$/src/app/services/auth.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/common/comments/comment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/comments/comment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/page/userPage/userPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/userPage/userPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store/professions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/professions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ui/registerForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/registerForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/store/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +201,9 @@
       <workItem from="1651521262541" duration="3656000" />
       <workItem from="1651575001560" duration="15138000" />
       <workItem from="1651662995728" duration="8460000" />
-      <workItem from="1651776666869" duration="1504000" />
+      <workItem from="1651776666869" duration="1860000" />
+      <workItem from="1652007539527" duration="5285000" />
+      <workItem from="1652040684488" duration="1184000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
