@@ -2,6 +2,7 @@ import { createAction, createSlice } from "@reduxjs/toolkit";
 import userService from "../services/user.service";
 import authService from "../services/auth.service";
 import localStorageService from "../services/localStorage.service";
+import { randomInt } from "../utils/randomInt";
 
 const usersSlice = createSlice({
     name: "users",
@@ -10,7 +11,7 @@ const usersSlice = createSlice({
         isLoading: true,
         error: null,
         auth: null,
-        isLoggedIn:false,
+        isLoggedIn: false,
     },
     reducers: {
         usersRequested: (state) => {
@@ -25,15 +26,21 @@ const usersSlice = createSlice({
             state.isLoading = false;
         },
         authRequestSuccess: (state, action) => {
-            state.auth = {
-                ...action.payload,
-                isLoggedIn: true
-            };
+            state.auth = action.payload;
+            state.isLoggedIn = true;
+
         },
         authRequestFailed: (state, action) => {
             state.error = action.payload;
             state.isLoading = false;
         },
+        userCreated: (state, action) => {
+            if (!Array.isArray(state.entities)) {
+                state.entities = [];
+            }
+            state.entities.push(action.payload);
+        },
+
     }
 });
 
@@ -46,11 +53,17 @@ const {
     usersReceived,
     usersRequestFailed,
     authRequestSuccess,
-    authRequestFailed
+    authRequestFailed,
+    userCreated
 } = actions;
 
 const authRequested = createAction("users/authRequested");
+const userCreateRequested = createAction("users/userCreateRequested");
+const createUserFailed = createAction("users/createUserFailed");
 
+export const login = (payload) => (dispatch) => {
+
+};
 export const signUp = ({
     email,
     password,
@@ -65,10 +78,34 @@ export const signUp = ({
         });
         localStorageService.setTokens(data);
         dispatch(authRequestSuccess({ userId: data.localId }));
+        dispatch(createUser({
+            _id: data.localId,
+            email,
+            rate: randomInt(1, 5),
+            completedMeetings: randomInt(0, 200),
+            image: `https://avatars.dicebear.com/api/avataaars/${(
+                Math.random() + 1
+            )
+                .toString(36)
+                .substring(7)}.svg`,
+            ...rest
+        }));
     } catch (error) {
-        dispatch(authRequestFailed(error.message))
+        dispatch(authRequestFailed(error.message));
     }
 };
+
+function createUser(payload) {
+    return async function (dispatch) {
+        dispatch(userCreateRequested());
+        try {
+            const { content } = await userService.create(payload);
+            dispatch(userCreated(content));
+        } catch (error) {
+            dispatch(createUserFailed(error.message));
+        }
+    };
+}
 
 export const loadUsersList = () => async (dispatch) => {
     dispatch(usersRequested());
@@ -87,4 +124,7 @@ export const getUserById = (userId) => state => {
         return state.users.entities.find((u) => u._id === userId);
     }
 };
+
+export const getIsLoggedIn = () => state => state.users.isLoggedIn;
+
 export default usersReducer;
