@@ -26,15 +26,15 @@ function App() {
         <div>
             <AuthProvider>
                 <Navbar/>
-                    <ProfessionProvider>
-                        <Switch>
-                            <Route path="/" exact component={Main}/>
-                            <Route path="/login/:type?" component={Login}/>
-                            <Route path="/logout" component={LogOut}/>
-                            <ProtectedRoute path="/users/:userId?/:edit?" component={Users}/>
-                            <Redirect to="/"/>
-                        </Switch>
-                    </ProfessionProvider>
+                <ProfessionProvider>
+                    <Switch>
+                        <Route path="/" exact component={Main}/>
+                        <Route path="/login/:type?" component={Login}/>
+                        <Route path="/logout" component={LogOut}/>
+                        <ProtectedRoute path="/users/:userId?/:edit?" component={Users}/>
+                        <Redirect to="/"/>
+                    </Switch>
+                </ProfessionProvider>
                 {/* <Route path="/users/:userId?" component={Users} /> */}
             </AuthProvider>
             <ToastContainer/>

@@ -7,12 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
-      <change afterPath="$PROJECT_DIR$/src/app/utils/history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/utils/randomInt.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/common/protectedRoute.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/protectedRoute.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ui/registerForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/registerForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/store/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/utils/history.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/history.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +208,7 @@
       <workItem from="1651776666869" duration="1860000" />
       <workItem from="1652007539527" duration="5285000" />
       <workItem from="1652040684488" duration="1665000" />
-      <workItem from="1652609729941" duration="5082000" />
+      <workItem from="1652609729941" duration="6769000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>

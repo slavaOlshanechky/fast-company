@@ -6,7 +6,6 @@ import RadioField from "../common/form/radioField";
 import MultiSelectField from "../common/form/multiSelectField";
 import CheckBoxField from "../common/form/checkBoxField";
 import { useProfession } from "../../hooks/useProfession";
-import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getQualities } from "../../store/qualities";
 import { signUp } from "../../store/users";
