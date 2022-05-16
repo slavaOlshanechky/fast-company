@@ -6,10 +6,11 @@ import RadioField from "../../common/form/radioField";
 import MultiSelectField from "../../common/form/multiSelectField";
 import BackHistoryButton from "../../common/backHistoryButton";
 import { useAuth } from "../../../hooks/useAuth";
-import { useProfession } from "../../../hooks/useProfession";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getQualities, getQualitiesLoadingStatus } from "../../../store/qualities";
+import { getCurrentUserData } from "../../../store/users";
+import { getProfessions, getProfessionsLoadingStatus } from "../../../store/professions";
 
 const UserEditPage = ({ userId }) => {
     const [isLoading, setIsLoading] = useState(true);
@@ -18,10 +19,9 @@ const UserEditPage = ({ userId }) => {
     const [data, setData] = useState();
 
     const {
-        currentUser,
         updateUserData
     } = useAuth();
-
+    const currentUser = useSelector(getCurrentUserData());
     const qualities = useSelector(getQualities());
     const qualitiesLoading = useSelector(getQualitiesLoadingStatus());
 
@@ -32,10 +32,8 @@ const UserEditPage = ({ userId }) => {
         )
     );
 
-    const {
-        professions,
-        isLoading: professionLoading
-    } = useProfession();
+    const professions = useSelector(getProfessions());
+    const professionsLoading = useSelector(getProfessionsLoadingStatus());
     const professionList = professions.map((p) => ({
         label: p.name,
         value: p._id
@@ -77,13 +75,13 @@ const UserEditPage = ({ userId }) => {
     };
 
     useEffect(() => {
-        if (!professionLoading && !qualitiesLoading && currentUser && !data) {
+        if (!professionsLoading && !qualitiesLoading && currentUser && !data) {
             setData({
                 ...currentUser,
                 qualities: transformData(currentUser.qualities)
             });
         }
-    }, [professionLoading, qualitiesLoading, currentUser, data]);
+    }, [professionsLoading, qualitiesLoading, currentUser, data]);
 
     useEffect(() => {
         if (data && isLoading) {

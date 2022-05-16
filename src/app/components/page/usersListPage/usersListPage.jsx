@@ -16,10 +16,7 @@ const UsersListPage = () => {
     const users = useSelector(getUsersList());
 
     const  currentUserId = useSelector(getCurrentUserId());
-    // const {
-    //     isLoading: professionsLoading,
-    //     professions
-    // } = useProfession();
+
     const professions = useSelector(getProfessions());
     const professionsLoading = useSelector(getProfessionsLoadingStatus());
 
