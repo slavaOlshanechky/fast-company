@@ -10,15 +10,19 @@ import TextField from "../../common/form/textField";
 import { useProfession } from "../../../hooks/useProfession";
 import { useSelector } from "react-redux";
 import { getCurrentUserId, getUsersList } from "../../../store/users";
+import { getProfessions, getProfessionsLoadingStatus } from "../../../store/professions";
 
 const UsersListPage = () => {
     const users = useSelector(getUsersList());
 
     const  currentUserId = useSelector(getCurrentUserId());
-    const {
-        isLoading: professionsLoading,
-        professions
-    } = useProfession();
+    // const {
+    //     isLoading: professionsLoading,
+    //     professions
+    // } = useProfession();
+    const professions = useSelector(getProfessions());
+    const professionsLoading = useSelector(getProfessionsLoadingStatus());
+
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedProf, setSelectedProf] = useState();
     const [sortBy, setSortBy] = useState({
