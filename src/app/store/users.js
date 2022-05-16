@@ -13,6 +13,7 @@ const usersSlice = createSlice({
         error: null,
         auth: null,
         isLoggedIn: false,
+        dataLoaded: false,
     },
     reducers: {
         usersRequested: (state) => {
@@ -20,6 +21,7 @@ const usersSlice = createSlice({
         },
         usersReceived: (state, action) => {
             state.entities = action.payload;
+            state.dataLoaded = true;
             state.isLoading = false;
         },
         usersRequestFailed: (state, action) => {
@@ -62,7 +64,10 @@ const authRequested = createAction("users/authRequested");
 const userCreateRequested = createAction("users/userCreateRequested");
 const createUserFailed = createAction("users/createUserFailed");
 
-export const login = ({payload,redirect}) => async (dispatch) => {
+export const login = ({
+    payload,
+    redirect
+}) => async (dispatch) => {
     const {
         email,
         password
@@ -73,11 +78,11 @@ export const login = ({payload,redirect}) => async (dispatch) => {
             email,
             password
         });
-        dispatch(authRequestSuccess({ userId: data.localId }))
-        localStorageService.setTokens(data)
-        history.push(redirect)
+        dispatch(authRequestSuccess({ userId: data.localId }));
+        localStorageService.setTokens(data);
+        history.push(redirect);
     } catch (error) {
-        dispatch(authRequestFailed(error.message))
+        dispatch(authRequestFailed(error.message));
     }
 };
 export const signUp = ({
@@ -143,5 +148,7 @@ export const getUserById = (userId) => state => {
 };
 
 export const getIsLoggedIn = () => state => state.users.isLoggedIn;
+export const getDataStatus = () => state => state.users.dataLoaded;
+export const getCurrentUserId = () => state => state.users.auth.userId;
 
 export default usersReducer;

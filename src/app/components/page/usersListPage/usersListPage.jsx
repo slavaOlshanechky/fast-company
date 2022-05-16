@@ -8,14 +8,13 @@ import UsersTable from "../../ui/usersTable";
 import _ from "lodash";
 import TextField from "../../common/form/textField";
 import { useProfession } from "../../../hooks/useProfession";
-import { useAuth } from "../../../hooks/useAuth";
 import { useSelector } from "react-redux";
-import { getUsersList } from "../../../store/users";
+import { getCurrentUserId, getUsersList } from "../../../store/users";
 
 const UsersListPage = () => {
     const users = useSelector(getUsersList());
 
-    const { currentUser } = useAuth();
+    const  currentUserId = useSelector(getCurrentUserId());
     const {
         isLoading: professionsLoading,
         professions
@@ -96,7 +95,7 @@ const UsersListPage = () => {
                         JSON.stringify(selectedProf)
                 )
                 : data;
-        return filteredUsers.filter((user) => user._id !== currentUser._id);
+        return filteredUsers.filter((user) => user._id !== currentUserId);
     }
 
     const filteredUsers = filterUsers(users);
