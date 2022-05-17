@@ -8,7 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layouts/logout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/logout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/page/userEditPage/userEditPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/userEditPage/userEditPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/store/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -205,7 +205,8 @@
       <workItem from="1652040684488" duration="1665000" />
       <workItem from="1652609729941" duration="12097000" />
       <workItem from="1652673586558" duration="12437000" />
-      <workItem from="1652787093271" duration="1810000" />
+      <workItem from="1652787093271" duration="4863000" />
+      <workItem from="1652814755016" duration="3427000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
