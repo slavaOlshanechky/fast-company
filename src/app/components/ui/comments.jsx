@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { orderBy } from "lodash";
 import CommentList from "../common/comments/commentList";
 import { useComments } from "../../hooks/useComments";
 import { AddCommentForm } from "../common/comments";
+import { useDispatch, useSelector } from "react-redux";
+import { getComments, getCommentsLoadingStatus, loadCommentsList } from "../../store/comments";
+import { useParams } from "react-router-dom";
 
 const Comments = () => {
+    const { userId } = useParams();
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(loadCommentsList(userId));
+    }, [userId]);
+
+    const isLoading = useSelector(getCommentsLoadingStatus());
+
     const {
         createComment,
-        comments,
         removeComment
     } = useComments();
 
+    const comments = useSelector(getComments());
     const handleRemoveComment = async (id) => {
         removeComment(id);
     };
@@ -25,15 +37,18 @@ const Comments = () => {
                     <AddCommentForm onAdd={handleSubmit}/>
                 </div>
             </div>
-            {comments.length > 0 && (
+            {sortedComments.length > 0 && (
                 <div className="card mb-3">
                     <div className="card-body">
                         <h2>Comments</h2>
                         <hr/>
-                        <CommentList
-                            comments={sortedComments}
-                            onRemove={handleRemoveComment}
-                        />
+                        {!isLoading ? (
+                            <CommentList
+                                comments={sortedComments}
+                                onRemove={handleRemoveComment}
+                            />
+                        ) : ("Loading...")
+                        }
                     </div>
                 </div>
             )}

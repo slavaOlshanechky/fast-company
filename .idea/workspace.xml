@@ -7,10 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
-      <change afterPath="$PROJECT_DIR$/src/app/utils/generateAuthError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/store/comments.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/loginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/loginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/common/comments/comment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/comments/comment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ui/comments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/comments.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store/createStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/createStore.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/components/ui/hoc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/store" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -61,11 +62,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\store" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\ui\hoc" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\page\userEditPage" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\hooks" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company" />
-      <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\ui" />
@@ -208,7 +209,7 @@
       <workItem from="1652673586558" duration="12437000" />
       <workItem from="1652787093271" duration="4863000" />
       <workItem from="1652814755016" duration="3427000" />
-      <workItem from="1652872520226" duration="5080000" />
+      <workItem from="1652872520226" duration="10284000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>

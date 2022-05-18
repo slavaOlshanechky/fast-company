@@ -11,9 +11,8 @@ const Comment = ({
     created_at: createdAt,
     onRemove
 }) => {
-    const  currentUserId = useSelector(getCurrentUserId());
     const user = useSelector(getUserById(userId));
-
+    const currentUserId = useSelector(getCurrentUserId());
     return (
         <div className="bg-light card-body mb-3">
             <div className="row">
