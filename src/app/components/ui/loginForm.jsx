@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import TextField from "../common/form/textField";
 import { validator } from "../../utils/validator";
 import CheckBoxField from "../common/form/checkBoxField";
-import { useDispatch } from "react-redux";
-import { login } from "../../store/users";
+import { useDispatch, useSelector } from "react-redux";
+import { getAuthErrors, login } from "../../store/users";
 import { useHistory } from "react-router-dom";
 // import * as yup from 'yup'
 
@@ -13,6 +13,7 @@ const LoginForm = () => {
         password: "",
         stayOn: false
     });
+    const loginError = useSelector(getAuthErrors());
     const history = useHistory();
     const dispatch = useDispatch();
     const [errors, setErrors] = useState({});
@@ -101,6 +102,7 @@ const LoginForm = () => {
             >
                 Stay logged in
             </CheckBoxField>
+            {loginError && <p className="text-danger">{loginError}</p>}
             <button
                 type="submit"
                 disabled={!isValid}
