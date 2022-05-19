@@ -7,11 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
-      <change afterPath="$PROJECT_DIR$/src/app/store/comments.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/common/comments/comment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/comments/comment.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/ui/comments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/comments.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store/createStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/createStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/comments.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,6 +208,8 @@
       <workItem from="1652787093271" duration="4863000" />
       <workItem from="1652814755016" duration="3427000" />
       <workItem from="1652872520226" duration="10284000" />
+      <workItem from="1652960383590" duration="5149000" />
+      <workItem from="1652996081578" duration="524000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>

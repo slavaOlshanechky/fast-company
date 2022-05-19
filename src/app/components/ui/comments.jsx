@@ -4,7 +4,13 @@ import CommentList from "../common/comments/commentList";
 import { useComments } from "../../hooks/useComments";
 import { AddCommentForm } from "../common/comments";
 import { useDispatch, useSelector } from "react-redux";
-import { getComments, getCommentsLoadingStatus, loadCommentsList } from "../../store/comments";
+import {
+    createComment,
+    getComments,
+    getCommentsLoadingStatus,
+    loadCommentsList,
+    removeComment
+} from "../../store/comments";
 import { useParams } from "react-router-dom";
 
 const Comments = () => {
@@ -16,18 +22,25 @@ const Comments = () => {
     }, [userId]);
 
     const isLoading = useSelector(getCommentsLoadingStatus());
+    //const removeComment = useSelector(getCommentsLoadingStatus());
 
-    const {
-        createComment,
-        removeComment
-    } = useComments();
+    // const {
+    //     createComment,
+    //     // removeComment
+    // } = useComments();
 
     const comments = useSelector(getComments());
-    const handleRemoveComment = async (id) => {
-        removeComment(id);
+    // const handleRemoveComment = async (id) => {
+    //     removeComment(id);
+    // };
+    const handleRemoveComment = (id) => {
+        dispatch(removeComment(id));
     };
-    const handleSubmit = async (data) => {
-        createComment(data);
+    const handleSubmit = (data) => {
+        dispatch(createComment({
+            ...data,
+            pageId: userId
+        }));
     };
     const sortedComments = orderBy(comments, ["created_at"], ["desc"]);
     return (
