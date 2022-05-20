@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { orderBy } from "lodash";
 import CommentList from "../common/comments/commentList";
-import { useComments } from "../../hooks/useComments";
 import { AddCommentForm } from "../common/comments";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -22,17 +21,9 @@ const Comments = () => {
     }, [userId]);
 
     const isLoading = useSelector(getCommentsLoadingStatus());
-    //const removeComment = useSelector(getCommentsLoadingStatus());
-
-    // const {
-    //     createComment,
-    //     // removeComment
-    // } = useComments();
 
     const comments = useSelector(getComments());
-    // const handleRemoveComment = async (id) => {
-    //     removeComment(id);
-    // };
+
     const handleRemoveComment = (id) => {
         dispatch(removeComment(id));
     };

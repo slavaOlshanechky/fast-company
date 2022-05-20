@@ -5,7 +5,6 @@ import Main from "./layouts/main";
 import Login from "./layouts/login";
 import Users from "./layouts/users";
 import { ToastContainer } from "react-toastify";
-import AuthProvider from "./hooks/useAuth";
 import ProtectedRoute from "./components/common/protectedRoute";
 import LogOut from "./layouts/logout";
 import AppLoader from "./components/ui/hoc/appLoader";
@@ -15,7 +14,6 @@ function App() {
     return (
         <div>
             <AppLoader>
-            <AuthProvider>
                 <Navbar/>
                     <Switch>
                         <Route path="/" exact component={Main}/>
@@ -25,7 +23,6 @@ function App() {
                         <Redirect to="/"/>
                     </Switch>
                 {/* <Route path="/users/:userId?" component={Users} /> */}
-            </AuthProvider>
             </AppLoader>
             <ToastContainer/>
         </div>

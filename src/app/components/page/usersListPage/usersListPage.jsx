@@ -7,7 +7,6 @@ import SearchStatus from "../../ui/searchStatus";
 import UsersTable from "../../ui/usersTable";
 import _ from "lodash";
 import TextField from "../../common/form/textField";
-import { useProfession } from "../../../hooks/useProfession";
 import { useSelector } from "react-redux";
 import { getCurrentUserId, getUsersList } from "../../../store/users";
 import { getProfessions, getProfessionsLoadingStatus } from "../../../store/professions";

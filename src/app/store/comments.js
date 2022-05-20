@@ -1,7 +1,6 @@
 import { createAction, createSlice } from "@reduxjs/toolkit";
 import commentService from "../services/comment.service";
 import { nanoid } from "nanoid";
-import localStorageService from "../services/localStorage.service";
 import { getCurrentUserId } from "./users";
 
 const commentsSlice = createSlice({
