@@ -5,25 +5,21 @@ import SelectField from "../../common/form/selectField";
 import RadioField from "../../common/form/radioField";
 import MultiSelectField from "../../common/form/multiSelectField";
 import BackHistoryButton from "../../common/backHistoryButton";
-import { useAuth } from "../../../hooks/useAuth";
-import { useProfession } from "../../../hooks/useProfession";
-import { useQualities } from "../../../hooks/useQualities";
-import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getQualities, getQualitiesLoadingStatus } from "../../../store/qualities";
+import { getCurrentUserData, updateUser } from "../../../store/users";
+import { getProfessions, getProfessionsLoadingStatus } from "../../../store/professions";
 
 const UserEditPage = ({ userId }) => {
     const [isLoading, setIsLoading] = useState(true);
 
-    const history = useHistory();
     const [data, setData] = useState();
+    const dispatch = useDispatch();
 
-    const {
-        currentUser,
-        updateUserData
-    } = useAuth();
-    const {
-        qualities,
-        isLoading: qualitiesLoading
-    } = useQualities();
+    const currentUser = useSelector(getCurrentUserData());
+    const qualities = useSelector(getQualities());
+    const qualitiesLoading = useSelector(getQualitiesLoadingStatus());
+
     const qualitiesList = qualities.map((q) => ({
                 label: q.name,
                 value: q._id
@@ -31,10 +27,8 @@ const UserEditPage = ({ userId }) => {
         )
     );
 
-    const {
-        professions,
-        isLoading: professionLoading
-    } = useProfession();
+    const professions = useSelector(getProfessions());
+    const professionsLoading = useSelector(getProfessionsLoadingStatus());
     const professionList = professions.map((p) => ({
         label: p.name,
         value: p._id
@@ -42,15 +36,16 @@ const UserEditPage = ({ userId }) => {
 
     const [errors, setErrors] = useState({});
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         const isValid = validate();
         if (!isValid) return;
-        await updateUserData({
-            ...data,
-            qualities: data.qualities.map((q) => q.value)
-        });
-        history.push(`/users/${currentUser._id}`);
+        dispatch(updateUser(
+            {
+                ...data,
+                qualities: data.qualities.map((q) => q.value)
+            }
+        ));
     };
 
     function getQualitiesListByIds(qualitiesIds) {
@@ -76,13 +71,13 @@ const UserEditPage = ({ userId }) => {
     };
 
     useEffect(() => {
-        if (!professionLoading && !qualitiesLoading && currentUser && !data) {
+        if (!professionsLoading && !qualitiesLoading && currentUser && !data) {
             setData({
                 ...currentUser,
                 qualities: transformData(currentUser.qualities)
             });
         }
-    }, [professionLoading, qualitiesLoading, currentUser, data]);
+    }, [professionsLoading, qualitiesLoading, currentUser, data]);
 
     useEffect(() => {
         if (data && isLoading) {
