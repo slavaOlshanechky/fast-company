@@ -22,7 +22,6 @@ module.exports = async (req, res, next) => {
         }
 
         req.user = data;
-        console.log(req.user);
         next();
     } catch (e) {
         res.status(401).json({
