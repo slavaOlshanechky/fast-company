@@ -11,9 +11,7 @@
 # production
 /build
 
-#mongoDB auth
-default.json*
-/config
+*.json
 
 # misc
 .DS_Store
