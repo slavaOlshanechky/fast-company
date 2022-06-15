@@ -11,13 +11,13 @@
 # production
 /build
 
-#mongoDB auth
-default.json
+# config file with keys
+/config
 
 # misc
 .DS_Store
 .env.local
-.env.development
+../client/.env.development
 .env.development.local
 .env.test.local
 .env.production.local
