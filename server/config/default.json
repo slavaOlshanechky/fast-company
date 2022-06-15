@@ -1,6 +1,0 @@
-{
-  "port": 8080,
-  "mongoUri": "mongodb+srv://sl:FVIXgB7xYDFJDzXl@cluster0.jqnlb.mongodb.net/app?retryWrites=true&w=majority",
-  "accessSecret": "jLjdklskflkfkflW",
-  "refreshSecret": "fnmkfm2kKsdjSg"
-}
