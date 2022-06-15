@@ -11,9 +11,8 @@
 # production
 /build
 
-#mongoDB auth
-default.json
-/config
+#Firebase API
+config.json
 
 # misc
 .DS_Store

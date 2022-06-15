@@ -13,7 +13,6 @@
 
 #mongoDB auth
 default.json
-/config
 
 # misc
 .DS_Store

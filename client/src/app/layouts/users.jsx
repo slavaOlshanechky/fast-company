@@ -2,7 +2,7 @@ import React from "react";
 import { Redirect, useParams } from "react-router-dom";
 import UserPage from "../components/page/userPage";
 import UsersListPage from "../components/page/usersListPage";
-import UserEditPage from "../components/page/userEditPage/";
+import UserEditPage from "../components/page/userEditPage";
 import UsersLoader from "../components/ui/hoc/usersLoader";
 import { useSelector } from "react-redux";
 import { getCurrentUserId } from "../store/users";
