@@ -12,7 +12,7 @@
 /build
 
 #mongoDB auth
-default.json
+default.json*
 /config
 
 # misc
