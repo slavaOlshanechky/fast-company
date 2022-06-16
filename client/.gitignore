@@ -12,7 +12,7 @@
 /build
 
 #Firebase API
-config.json
+/client/src/app/config.json
 
 # misc
 .DS_Store
