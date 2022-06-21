@@ -132,7 +132,7 @@ router.post("/signInWithPassword", [
 );
 
 function isTokenInvalid(data, dbToken) {
-    return !data || !dbToken || data._id !== dbToken?.user?.toString();
+    return !data || !dbToken || data?._id !== dbToken?.user?.toString();
 }
 
 router.post("/token", async (req, res) => {
