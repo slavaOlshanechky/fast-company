@@ -37,6 +37,7 @@ const RegisterForm = () => {
             }
         )
     );
+
     const [errors, setErrors] = useState({});
 
     const handleChange = (target) => {

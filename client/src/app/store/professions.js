@@ -22,8 +22,7 @@ const professionsSlice = createSlice({
         professionsRequestFailed: (state, action) => {
             state.error = action.payload;
             state.isLoading = false;
-        },
-
+        }
     }
 });
 
@@ -58,6 +57,6 @@ export const getProfessionById = (id) => (state) => {
     if (state.professions.entities) {
         return state.professions.entities.find((p) => p._id === id);
     }
-    ;
+
 };
 export default professionsReducer;
