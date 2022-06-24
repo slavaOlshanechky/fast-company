@@ -7,8 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eff2988d-0997-442e-873d-b1fadaaf7d40" name="Changes" comment="edit handleDelete()">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/fast-company.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fast-company.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/client/asset-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/client/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/client/precache-manifest.74e0f10730d066027688623968d567fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/client/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/client/service-worker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/client/static/css/2.ef7062be.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/client/static/css/2.ef7062be.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/client/static/js/2.f4f77591.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/client/static/js/2.f4f77591.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/client/static/js/3.dac9cbe5.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/client/static/js/3.dac9cbe5.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/client/static/js/main.8785eaeb.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/client/static/js/main.8785eaeb.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/client/static/js/runtime~main.50ffaaeb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/client/static/js/runtime~main.50ffaaeb.js.map" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +64,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -54,24 +73,24 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+    <property name="settings.editor.selected.configurable" value="DockerRegistry" />
     <property name="ts.external.directory.path" value="C:\Users\Sl\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\213.6461.79\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sl\WebstormProjects\fast-company\server" />
+      <recent name="C:\Users\Sl\WebstormProjects\fast-company\server\client" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\server\models" />
-      <recent name="C:\Users\Sl\WebstormProjects\fast-company\server" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\store" />
-      <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\ui\hoc" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sl\WebstormProjects\fast-company\server" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\server\startUp" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\client" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\components\ui" />
       <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app" />
-      <recent name="C:\Users\Sl\WebstormProjects\fast-company\src\app\api\fake.api" />
     </key>
   </component>
   <component name="RunManager">
@@ -228,7 +247,16 @@
       <workItem from="1655147249558" duration="3305000" />
       <workItem from="1655191295873" duration="7404000" />
       <workItem from="1655232475337" duration="4415000" />
-      <workItem from="1655289036398" duration="2070000" />
+      <workItem from="1655289036398" duration="12181000" />
+      <workItem from="1655368538662" duration="7701000" />
+      <workItem from="1655581358950" duration="2864000" />
+      <workItem from="1655626539204" duration="1282000" />
+      <workItem from="1655721789792" duration="10348000" />
+      <workItem from="1655809421941" duration="10346000" />
+      <workItem from="1655896368953" duration="8228000" />
+      <workItem from="1655931135964" duration="330000" />
+      <workItem from="1655982619477" duration="4278000" />
+      <workItem from="1656054977887" duration="5665000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1639150314573</created>
