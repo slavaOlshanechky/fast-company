@@ -10,7 +10,6 @@ const http = axios.create({
 });
 
 http.interceptors.request.use(async function (config) {
-    // Do something before request is sent
     const expiresDate = localStorageService.getTokenExpiresDate();
     const refreshToken = localStorageService.getRefreshToken();
     const isExpired = refreshToken && expiresDate < Date.now();
@@ -27,7 +26,6 @@ http.interceptors.request.use(async function (config) {
                 expiresIn: data.expires_in,
                 localId: data.user_id
             });
-
         }
         const accessToken = localStorageService.getAccessToken();
         if (accessToken) {
@@ -39,26 +37,19 @@ http.interceptors.request.use(async function (config) {
     } else {
         if (isExpired) {
             const data = await authService.refresh();
-
-            localStorageService.setTokens({
-                // refreshToken: data.refreshToken,
-                // accessToken: data.accessToken,
-                // expiresIn: data.expiresIn,
-                // userId: data.userId
-                data
-            });
-
+            localStorageService.setTokens(data);
         }
         const accessToken = localStorageService.getAccessToken();
         if (accessToken) {
-            config.params = {
-                ...config.params,
+            config.headers = {
+                ...config.headers,
                 Authorization: `Bearer ${accessToken}`
             };
         }
     }
     return config;
-}, function (error) {
+},
+    function (error) {
     // Do something with request error
     return Promise.reject(error);
 });
@@ -76,6 +67,7 @@ http.interceptors.response.use(
                 content: transformData(res.data)
             };
         }
+        res.data = { content: res.data };
         return res;
     },
     function (error) {
